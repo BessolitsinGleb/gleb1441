@@ -1,16 +1,43 @@
 <div align="center">
 
-<img src="assets/img/avatar.jpg" width="120" height="120" alt="gleb1441" style="border-radius:50%">
+<img src="assets/img/avatar.jpg" width="120" height="120" alt="gleb1441">
 
-# gleb1441
+# Привет, я Глеб 👋
 
-**Бессолицин Глеб** — сайт-визитка
+**ML-инженер и бэкенд-разработчик** · [`gleb1441`](https://github.com/BessolitsinGleb)
 
+Это репозиторий моего сайта-визитки — здесь можно узнать, чем я занимаюсь, посмотреть стек и написать мне.
+
+[![Telegram](https://img.shields.io/badge/Telegram-@bissalitsin-46656F?style=flat-square&logo=telegram&logoColor=FBFBFB)](https://t.me/bissalitsin)
+[![Email](https://img.shields.io/badge/Почта-bessolitsingleb@yandex.ru-8FABB7?style=flat-square&logo=maildotru&logoColor=01070A)](mailto:bessolitsingleb@yandex.ru)
 [![GitHub](https://img.shields.io/badge/GitHub-BessolitsinGleb-01070A?style=flat-square&logo=github&logoColor=FBFBFB)](https://github.com/BessolitsinGleb)
-![HTML](https://img.shields.io/badge/HTML-46656F?style=flat-square&logo=html5&logoColor=FBFBFB)
-![CSS](https://img.shields.io/badge/CSS-46656F?style=flat-square&logo=css&logoColor=FBFBFB)
-![JavaScript](https://img.shields.io/badge/Vanilla_JS-8FABB7?style=flat-square&logo=javascript&logoColor=01070A)
-![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-D8DFE5?style=flat-square&logo=githubpages&logoColor=01070A)
+
+</div>
+
+---
+
+## Коротко обо мне
+
+Три года занимаюсь машинным обучением и 3,5 года пишу бэкенд. Люблю, когда проект проходит весь путь целиком: от данных и модели до API и живого сервера в продакшене.
+
+- 🧠 **ML** — классический ML, deep learning, computer vision, NLP, RL. PyTorch, scikit-learn, pandas, NumPy, Matplotlib
+- 🤖 **ИИ-агенты и боты** — агенты, чат-боты, RAG, модели через OpenRouter или LLM Proxy
+- ⚙️ **Бэкенд** — FastAPI, Pydantic, SQLAlchemy, WebSocket
+- 🗄 **Данные** — PostgreSQL (мой фаворит), Redis, любые SQL и NoSQL базы
+- 🚀 **Деплой** — Docker, Git, Railway, Render, VPS
+- 💬 **Языки** — Python, SQL, JavaScript, Kotlin и немного C#
+
+Фронтенд — не моя основная специализация, но поправить вёрстку могу. Как раз этот сайт и есть пример 🙂
+
+## Что есть на сайте
+
+- Две темы — светлая и тёмная. По умолчанию подстраивается под систему, переключатель в шапке.
+- Два языка — русский и английский, тоже переключаются в шапке.
+- Блоки: обо мне и личные качества, стек, достижения, портфолио и контакты с формой заявки.
+- Аккуратно смотрится на компьютере, планшете и телефоне.
+- Много небольших анимаций: «живой» фасад из треугольников на первом экране, машущий аватар, плавное появление блоков. Если в системе включено «уменьшить движение», анимации отключаются.
+
+Палитра — спокойные архитектурные цвета:
 
 ![#01070A](https://img.shields.io/badge/%2301070A-01070A?style=for-the-badge)
 ![#46656F](https://img.shields.io/badge/%2346656F-46656F?style=for-the-badge)
@@ -18,88 +45,70 @@
 ![#D8DFE5](https://img.shields.io/badge/%23D8DFE5-D8DFE5?style=for-the-badge)
 ![#FBFBFB](https://img.shields.io/badge/%23FBFBFB-FBFBFB?style=for-the-badge)
 
-</div>
+## Как поменять содержимое
 
----
+Весь текст лежит в одном файле — [`assets/js/content.js`](assets/js/content.js). В вёрстку лезть не нужно: правите текст, сохраняете, обновляете страницу.
 
-## ✦ О проекте
+У каждой фразы два варианта — для русской и английской версии:
 
-Статичный сайт-визитка без сборщиков и зависимостей: открывается из любого хостинга, в том числе из GitHub Pages.
-Палитра вдохновлена современной архитектурой — чёрный, тёмно-серо-синий, синевато-серый, светло-серый и белый.
-
-**Что внутри**
-
-- **Первый экран** — имя, роль с «печатающимся» текстом, живой low-poly «фасад» на canvas, который реагирует на курсор, и полоса палитры (клик копирует HEX).
-- **Аватар в шапке** — покачивается, машет при загрузке, вращающееся пунктирное кольцо и «привет!» при наведении.
-- **01 · Обо мне** — bento-сетка: описание, профиль, навыки, анимированные счётчики.
-- **02 · Достижения** — таймлайн, который заполняется при прокрутке.
-- **03 · Портфолио** — карточки с фильтрами по категориям и 3D-наклоном; если нет картинки, обложка генерируется в палитре сайта.
-- **04 · Связаться** — Telegram, почта (с копированием), GitHub и форма заявки.
-- Прелоадер, прогресс прокрутки, «магнитные» кнопки, подсветка карточек за курсором, бегущая строка.
-- Адаптив: компьютер, планшет, телефон. Учитывается `prefers-reduced-motion`.
-
-## ✦ Структура
-
-```
-.
-├── index.html            разметка
-├── 404.html              страница «не найдено»
-├── .nojekyll             отключает Jekyll на GitHub Pages
-└── assets
-    ├── css/style.css     стили и адаптив
-    ├── js/content.js     ✏️ ВЕСЬ КОНТЕНТ — заполнять здесь
-    ├── js/main.js        логика и анимации
-    └── img/              аватар и иконки
+```js
+title: { ru: 'Базы данных', en: 'Databases' }
 ```
 
-## ✦ Как заполнить
+Если текст одинаковый на обоих языках (например, `'PyTorch'`), достаточно обычной строки.
 
-Всё редактируется в одном файле — [`assets/js/content.js`](assets/js/content.js):
+Что где лежит:
 
-| Что | Поле |
-| --- | --- |
-| Роль, слова для «печатающегося» текста, подзаголовок | `role`, `roleWords`, `tagline` |
-| Почта (на неё же приходят заявки с формы) | `email` |
-| Telegram (username без `@`) | `telegram` |
-| Текст «Обо мне», факты, цифры, навыки | `aboutLead`, `aboutText`, `facts`, `stats`, `skills` |
-| Достижения | `achievements` — `{ date, title, place, text, link }` |
-| Портфолио | `projects` — `{ title, category, desc, tags, image, link, repo }` |
+- `aboutLead`, `aboutText` — текст «Обо мне»
+- `qualities` — личные качества
+- `stats` — цифры (можно дробные, например `3.5`)
+- `stack` — карточки стека; чтобы добавить технологию, допишите её в `items` нужной карточки
+- `achievements` — достижения
+- `projects` — портфолио. Картинки кладите в `assets/img/projects/` и указывайте путь в `image`. Если картинки нет, обложка нарисуется сама.
+- `email`, `telegram` — контакты
 
-Картинки проектов кладите в `assets/img/projects/` и указывайте путь в поле `image`.
-Пока поля `email` или `telegram` пустые, на сайте показываются аккуратные заглушки.
+### Про форму заявки
 
-### Форма заявки
+Письма с формы приходят на почту из `email` через бесплатный сервис [FormSubmit](https://formsubmit.co) — свой сервер не нужен. Есть один нюанс: после самой первой заявки FormSubmit пришлёт письмо с кнопкой **Activate**. Нажмите её, и дальше всё будет приходить само.
 
-Форма работает без своего сервера через [FormSubmit](https://formsubmit.co):
+## Как запустить у себя
 
-1. Укажите `email` в `content.js` и опубликуйте сайт.
-2. Отправьте с сайта первую тестовую заявку — на почту придёт письмо с подтверждением, нажмите **Activate**.
-3. Готово, дальше заявки приходят на почту.
-
-Хотите другой сервис (например, Formspree) — укажите его адрес в `formEndpoint`.
-
-## ✦ Локальный запуск
+Сборка не нужна, это обычные HTML, CSS и JS. Достаточно поднять любой локальный сервер в папке проекта:
 
 ```bash
 python3 -m http.server 5173
 ```
 
-и откройте <http://localhost:5173>.
+и открыть <http://localhost:5173>.
 
-## ✦ Публикация на GitHub Pages
+## Как выложить на GitHub Pages
 
-1. Создайте репозиторий на GitHub. Если назвать его `BessolitsinGleb.github.io`, сайт будет доступен по адресу `https://bessolitsingleb.github.io/`; при другом имени адрес будет `https://bessolitsingleb.github.io/<имя-репозитория>/`.
-2. Отправьте код:
+1. Создайте репозиторий на GitHub. Если назвать его `BessolitsinGleb.github.io`, сайт откроется прямо по адресу `https://bessolitsingleb.github.io/`. С любым другим именем адрес будет `https://bessolitsingleb.github.io/<имя-репозитория>/`.
+2. Отправьте туда код:
    ```bash
    git remote add origin https://github.com/BessolitsinGleb/<имя-репозитория>.git
    git push -u origin main
    ```
-3. В репозитории: **Settings → Pages → Build and deployment → Source: Deploy from a branch**, ветка `main`, папка `/ (root)` → **Save**.
-4. Через минуту-две сайт появится по адресу из шага 1.
-5. В `index.html` замените `og:image` на полный адрес картинки, чтобы превью ссылки красиво показывалось в мессенджерах.
+3. В репозитории откройте **Settings → Pages**, в **Source** выберите **Deploy from a branch**, ветку `main` и папку `/ (root)`, нажмите **Save**.
+4. Через пару минут сайт будет доступен по адресу из первого шага.
+5. Напоследок поменяйте в `index.html` ссылку в `og:image` на полный адрес картинки — тогда превью в мессенджерах будет с аватаркой.
+
+## Как устроен проект
+
+```
+.
+├── index.html          разметка страницы
+├── 404.html            страница «не найдено»
+├── .nojekyll           чтобы GitHub Pages отдавал файлы как есть
+└── assets
+    ├── css/style.css   стили, темы и адаптив
+    ├── js/content.js   весь текст сайта — правится здесь
+    ├── js/main.js      анимации, переводы, темы, форма
+    └── img/            аватар и иконки
+```
 
 ---
 
 <div align="center">
-<sub>© Бессолицин Глеб · gleb1441</sub>
+<sub>Сделано с вниманием к деталям · © Бессолицин Глеб</sub>
 </div>
