@@ -177,7 +177,7 @@ window.SITE = {
       cert: { img: 'assets/certs/tbank-it-2026.webp', thumb: 'assets/certs/tbank-it-2026-thumb.webp' },
     },
     {
-      date: '', // ✏️ укажите год хакатона, например: '2026'
+      date: { ru: 'Май 2026', en: 'May 2026' },
       badge: { ru: '🏆 Победители', en: '🏆 Winners' },
       title: { ru: 'Победа на IT-хакатоне «Большого межвузовского турнира»', en: 'Winner of the “Big Inter-University Tournament” IT hackathon' },
       place: { ru: 'ДВФУ × Кодик × Славда × FESCO · направление «Искусственный интеллект»', en: 'FEFU × Kodik × Slavda × FESCO · Artificial Intelligence track' },
@@ -308,7 +308,7 @@ window.SITE = {
         en: 'A digital ecosystem for container terminals. Speeds up finding and moving containers many times over, suggests the best placement by size, departure date and other factors, and generates a per-client report — storage and every move with prices.',
       },
       tags: ['Python', 'Optimization', 'Logistics'],
-      links: [], // ✏️ репозиторий пока закрыт: добавьте { label: 'GitHub', url: 'https://github.com/BessolitsinGleb/EFCT' }
+      links: [{ label: 'GitHub', url: 'https://github.com/BessolitsinGleb/EFCT' }],
     },
     {
       title: 'Smart Wardrobe',
@@ -363,7 +363,7 @@ window.SITE = {
         en: 'A tool for listening instead of reading: voices PDF files, and in auto-read mode reads text from a selected window aloud and turns pages until the text runs out.',
       },
       tags: ['Python', 'TTS', 'OCR'],
-      links: [], // ✏️ репозиторий пока закрыт: добавьте { label: 'GitHub', url: 'https://github.com/BessolitsinGleb/voice_read' }
+      links: [{ label: 'GitHub', url: 'https://github.com/BessolitsinGleb/voice_read' }],
     },
     {
       title: 'OS AI Survey',
