@@ -179,14 +179,14 @@ window.SITE = {
     {
       date: { ru: 'Май 2026', en: 'May 2026' },
       badge: { ru: '🏆 Победители', en: '🏆 Winners' },
-      title: { ru: 'Победа на IT-хакатоне «Большого межвузовского турнира»', en: 'Winner of the “Big Inter-University Tournament” IT hackathon' },
-      place: { ru: 'ДВФУ × Кодик × Славда × FESCO · направление «Искусственный интеллект»', en: 'FEFU × Kodik × Slavda × FESCO · Artificial Intelligence track' },
+      title: { ru: 'Победа на IT-хакатоне «Большого межпредметного турнира»', en: 'Winner of the “Big Interdisciplinary Tournament” IT hackathon' },
+      place: { ru: 'ДВФУ × Kodik × Slavda × FESCO · направление «Искусственный интеллект»', en: 'FEFU × Kodik × Slavda × FESCO · Artificial Intelligence track' },
       text: {
         ru: 'Был бэкенд-разработчиком в команде-победителе. Сделали «AI-рекрутера олимпиад» — персонального помощника, который по анкете школьника подбирает олимпиады, конкурсы и конференции, объясняет с помощью LLM, почему они подходят, и собирает календарь дедлайнов.',
         en: 'Backend developer in the winning team. We built an “AI olympiad recruiter” — a personal assistant that matches a student’s profile with olympiads, contests and conferences, explains each pick with an LLM and builds a deadline calendar.',
       },
       links: [{ label: 'GitHub', url: 'https://github.com/leksik-phew/AI-Recruiter-olimpiads' }],
-      cert: { img: 'assets/certs/hackathon-dvfu.webp', thumb: 'assets/certs/hackathon-dvfu-thumb.webp' },
+      cert: { img: 'assets/certs/hackathon-dvfu.webp', thumb: 'assets/certs/hackathon-dvfu-thumb.webp', pdf: 'assets/certs/hackathon-dvfu.pdf' },
     },
     {
       date: { ru: 'Июль 2026', en: 'July 2026' },
