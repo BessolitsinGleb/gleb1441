@@ -2,18 +2,28 @@
 <html lang="ru" data-theme="light">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Бессолицин Глеб — ML-инженер · gleb1441</title>
   <meta name="description" content="Бессолицин Глеб (gleb1441) — ML-инженер и бэкенд-разработчик: нейросети, ИИ-агенты, чат-боты, FastAPI. Портфолио, стек и контакты.">
   <meta name="author" content="Бессолицин Глеб">
   <meta name="theme-color" content="#FBFBFB">
   <meta name="color-scheme" content="light dark">
 
+  <link rel="canonical" href="https://bessolitsingleb.github.io/gleb1441/">
+  <!-- превью ссылки в Telegram и соцсетях -->
   <meta property="og:type" content="website">
+  <meta property="og:site_name" content="gleb1441">
+  <meta property="og:locale" content="ru_RU">
+  <meta property="og:locale:alternate" content="en_US">
+  <meta property="og:url" content="https://bessolitsingleb.github.io/gleb1441/">
   <meta property="og:title" content="Бессолицин Глеб — ML-инженер · gleb1441">
-  <meta property="og:description" content="ML-инженер и бэкенд-разработчик: нейросети, ИИ-агенты, чат-боты, FastAPI.">
-  <!-- ✏️ После публикации замените на полный адрес: https://<user>.github.io/<repo>/assets/img/avatar.jpg -->
-  <meta property="og:image" content="assets/img/avatar.jpg">
+  <meta property="og:description" content="ML-инженер и бэкенд-разработчик: нейросети, ИИ-агенты, чат-боты, FastAPI. Портфолио, достижения и контакты.">
+  <meta property="og:image" content="https://bessolitsingleb.github.io/gleb1441/assets/img/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="gleb1441 — Бессолицин Глеб, ML-инженер">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://bessolitsingleb.github.io/gleb1441/assets/img/og.jpg">
 
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
@@ -32,10 +42,18 @@
       d.setAttribute('data-theme', t);
       d.lang = l;
       d.classList.add('js');
+      // открыт внутри Telegram (Mini App или встроенный браузер)
+      if (window.TelegramWebviewProxy || /tgWebApp/.test(location.hash)) {
+        d.classList.add('in-telegram');
+        var s = document.createElement('script');
+        s.src = 'https://telegram.org/js/telegram-web-app.js';
+        s.async = true;
+        document.head.appendChild(s);
+      }
     })();
   </script>
   <!-- ?v=… — версия файлов: увеличьте число после правок, чтобы браузеры сразу подхватили изменения -->
-  <link rel="stylesheet" href="assets/css/style.css?v=4">
+  <link rel="stylesheet" href="assets/css/style.css?v=5">
 </head>
 <body>
 
@@ -73,7 +91,8 @@
         <a href="#stack" class="nav__link"><span class="nav__num">02</span><span data-i18n="nav.stack">Стек</span></a>
         <a href="#achievements" class="nav__link"><span class="nav__num">03</span><span data-i18n="nav.achievements">Достижения</span></a>
         <a href="#portfolio" class="nav__link"><span class="nav__num">04</span><span data-i18n="nav.portfolio">Портфолио</span></a>
-        <a href="#contact" class="nav__link"><span class="nav__num">05</span><span data-i18n="nav.contact">Связаться</span></a>
+        <a href="#learning" class="nav__link"><span class="nav__num">05</span><span data-i18n="nav.learning">Обучение</span></a>
+        <a href="#contact" class="nav__link"><span class="nav__num">06</span><span data-i18n="nav.contact">Связаться</span></a>
         <div class="nav__extra">
           <a href="https://github.com/BessolitsinGleb" target="_blank" rel="noopener" data-link="github" class="link-arrow">GitHub</a>
           <a href="#" target="_blank" rel="noopener" data-link="telegram" data-bind="telegram" class="link-arrow">Telegram</a>
@@ -231,8 +250,10 @@
           <h2 class="section__title" data-i18n="achievements.title">Достижения</h2>
           <span class="section__line"></span>
         </header>
+        <p class="section__kicker reveal" data-i18n="achievements.kicker">Хакатоны, олимпиады и проектные смены — с сертификатами</p>
 
-        <ol class="timeline" id="timeline"></ol>
+        <ul class="highlights reveal" id="highlights"></ul>
+        <div class="achievements" id="achList"></div>
       </div>
     </section>
 
@@ -244,6 +265,7 @@
           <h2 class="section__title" data-i18n="portfolio.title">Портфолио</h2>
           <span class="section__line"></span>
         </header>
+        <p class="section__kicker reveal" data-i18n="portfolio.kicker">Проекты с хакатонов и смен, заказы и пет-проекты</p>
 
         <div class="filters reveal" id="filters" role="tablist" data-i18n-attr="aria-label:aria.filters" aria-label="Фильтр проектов"></div>
         <div class="projects" id="projects"></div>
@@ -258,12 +280,43 @@
       </div>
     </section>
 
-    <!-- ============ 05 СВЯЗАТЬСЯ ============ -->
+    <!-- ============ 05 ОБУЧЕНИЕ ============ -->
+    <section class="section section--soft" id="learning">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__num mono">(05)</span>
+          <h2 class="section__title" data-i18n="learning.title">Обучение</h2>
+          <span class="section__line"></span>
+        </header>
+        <p class="section__kicker reveal" data-i18n="learning.kicker">Постоянно учусь и проверяю знания на практике</p>
+
+        <div class="learn">
+          <article class="card card--feature learn-now spot reveal">
+            <h3 class="card__title mono" data-i18n="learning.now">// сейчас изучаю</h3>
+            <ul class="learn-now__list" id="learnNow"></ul>
+          </article>
+
+          <article class="card learn-practice spot reveal" data-delay="1">
+            <h3 class="card__title mono" data-i18n="learning.practice">// где практикуюсь</h3>
+            <ul class="practice" id="practice"></ul>
+          </article>
+
+          <article class="card learn-courses spot reveal">
+            <h3 class="card__title mono" data-i18n="learning.courses">// курсы и интенсивы</h3>
+            <ul class="courses" id="courses"></ul>
+          </article>
+
+          <article class="card learn-sirius spot reveal" data-delay="1" id="sirius"></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 06 СВЯЗАТЬСЯ ============ -->
     <section class="contact" id="contact">
       <div class="contact__glow" aria-hidden="true"></div>
       <div class="container">
         <header class="section__head section__head--light reveal">
-          <span class="section__num mono">(05)</span>
+          <span class="section__num mono">(06)</span>
           <h2 class="section__title" data-i18n="contact.title">Связаться</h2>
           <span class="section__line"></span>
         </header>
@@ -366,9 +419,32 @@
     </section>
   </main>
 
+  <!-- просмотр сертификатов -->
+  <dialog class="viewer" id="viewer" aria-labelledby="viewerTitle">
+    <div class="viewer__bar">
+      <p class="viewer__title" id="viewerTitle"></p>
+      <div class="viewer__actions">
+        <a class="viewer__pdf" id="viewerPdf" href="#" target="_blank" rel="noopener" data-i18n="viewer.pdf">Оригинал PDF</a>
+        <button class="viewer__btn" type="button" data-viewer="close" data-i18n-attr="aria-label:viewer.close" aria-label="Закрыть">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+        </button>
+      </div>
+    </div>
+    <figure class="viewer__stage">
+      <button class="viewer__nav viewer__nav--prev" type="button" data-viewer="prev" data-i18n-attr="aria-label:viewer.prev" aria-label="Предыдущий">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+      </button>
+      <img id="viewerImg" alt="">
+      <button class="viewer__nav viewer__nav--next" type="button" data-viewer="next" data-i18n-attr="aria-label:viewer.next" aria-label="Следующий">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+      </button>
+    </figure>
+    <p class="viewer__count mono" id="viewerCount"></p>
+  </dialog>
+
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="assets/js/content.js?v=4"></script>
-  <script src="assets/js/main.js?v=4"></script>
+  <script src="assets/js/content.js?v=5"></script>
+  <script src="assets/js/main.js?v=5"></script>
 </body>
 </html>

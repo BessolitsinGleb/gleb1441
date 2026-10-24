@@ -26,14 +26,20 @@
       'meta.title': 'Бессолицин Глеб — ML-инженер · gleb1441',
       'meta.description': 'Бессолицин Глеб (gleb1441) — ML-инженер и бэкенд-разработчик: нейросети, ИИ-агенты, чат-боты, FastAPI. Портфолио, стек и контакты.',
       'avatar.hi': 'привет!',
-      'nav.about': 'Обо мне', 'nav.stack': 'Стек', 'nav.achievements': 'Достижения', 'nav.portfolio': 'Портфолио', 'nav.contact': 'Связаться',
+      'nav.about': 'Обо мне', 'nav.stack': 'Стек', 'nav.achievements': 'Достижения', 'nav.portfolio': 'Портфолио', 'nav.learning': 'Обучение', 'nav.contact': 'Связаться',
       'header.cta': 'Связаться',
       'hero.cta1': 'Обсудить проект', 'hero.cta2': 'Мой стек', 'hero.nick': 'ник', 'hero.scroll': 'листайте',
       'about.title': 'Обо мне', 'about.profile': '// профиль', 'about.qualities': '// личные качества',
       'about.cycle': '// полный цикл', 'about.cycleLead': 'От идеи до продакшена — без передачи проекта между подрядчиками',
       'stack.title': 'Стек', 'stack.kicker': 'Чем владею и с чем работаю каждый день',
-      'achievements.title': 'Достижения', 'achievements.empty': 'Скоро здесь появятся достижения', 'achievements.more': 'Подробнее',
+      'achievements.title': 'Достижения', 'achievements.empty': 'Скоро здесь появятся достижения',
+      'achievements.kicker': 'Хакатоны, олимпиады и проектные смены — с сертификатами', 'achievements.cert': 'Сертификат',
       'portfolio.title': 'Портфолио', 'portfolio.all': 'Все', 'portfolio.empty': 'Скоро здесь появятся работы',
+      'portfolio.kicker': 'Проекты с хакатонов и смен, заказы и пет-проекты', 'portfolio.repoSoon': 'репозиторий скоро',
+      'learning.title': 'Обучение', 'learning.kicker': 'Постоянно учусь и проверяю знания на практике',
+      'learning.now': '// сейчас изучаю', 'learning.practice': '// где практикуюсь', 'learning.courses': '// курсы и интенсивы',
+      'learning.open': 'Открыть',
+      'viewer.pdf': 'Оригинал PDF', 'viewer.close': 'Закрыть', 'viewer.prev': 'Предыдущий', 'viewer.next': 'Следующий', 'viewer.of': 'из',
       'portfolio.more': 'Больше кода и экспериментов — на GitHub', 'portfolio.openGh': 'Открыть GitHub',
       'contact.title': 'Связаться', 'contact.h1': 'Есть задача?', 'contact.h2': 'Давайте обсудим.',
       'contact.text': 'Напишите в Telegram, на почту или оставьте заявку в форме — отвечу в течение дня.',
@@ -59,14 +65,20 @@
       'meta.title': 'Gleb Bessolitsin — ML Engineer · gleb1441',
       'meta.description': 'Gleb Bessolitsin (gleb1441) — ML engineer and backend developer: neural networks, AI agents, chatbots, FastAPI. Portfolio, tech stack and contacts.',
       'avatar.hi': 'hi there!',
-      'nav.about': 'About', 'nav.stack': 'Stack', 'nav.achievements': 'Achievements', 'nav.portfolio': 'Portfolio', 'nav.contact': 'Contact',
+      'nav.about': 'About', 'nav.stack': 'Stack', 'nav.achievements': 'Achievements', 'nav.portfolio': 'Portfolio', 'nav.learning': 'Learning', 'nav.contact': 'Contact',
       'header.cta': "Let's talk",
       'hero.cta1': 'Discuss a project', 'hero.cta2': 'My stack', 'hero.nick': 'nick', 'hero.scroll': 'scroll',
       'about.title': 'About me', 'about.profile': '// profile', 'about.qualities': '// personal qualities',
       'about.cycle': '// full cycle', 'about.cycleLead': 'From idea to production — no hand-offs between contractors',
       'stack.title': 'Stack', 'stack.kicker': 'What I know and work with every day',
-      'achievements.title': 'Achievements', 'achievements.empty': 'Achievements are coming soon', 'achievements.more': 'Details',
+      'achievements.title': 'Achievements', 'achievements.empty': 'Achievements are coming soon',
+      'achievements.kicker': 'Hackathons, olympiads and project programs — with certificates', 'achievements.cert': 'Certificate',
       'portfolio.title': 'Portfolio', 'portfolio.all': 'All', 'portfolio.empty': 'Projects are coming soon',
+      'portfolio.kicker': 'Hackathon projects, client work and side projects', 'portfolio.repoSoon': 'repository coming soon',
+      'learning.title': 'Learning', 'learning.kicker': 'Always learning — and testing it in practice',
+      'learning.now': '// currently studying', 'learning.practice': '// where I practice', 'learning.courses': '// courses & intensives',
+      'learning.open': 'Open',
+      'viewer.pdf': 'Original PDF', 'viewer.close': 'Close', 'viewer.prev': 'Previous', 'viewer.next': 'Next', 'viewer.of': 'of',
       'portfolio.more': 'More code and experiments on GitHub', 'portfolio.openGh': 'Open GitHub',
       'contact.title': 'Contact', 'contact.h1': 'Have a task?', 'contact.h2': "Let's talk.",
       'contact.text': 'Message me on Telegram, send an email or leave a request in the form — I reply within a day.',
@@ -183,8 +195,7 @@
     '<svg viewBox="0 0 24 24"><path d="M20 15a2 2 0 0 1-2 2H8l-4 4V5a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2Z"/><path d="M8 9h8M8 12.5h5"/></svg>',
     '<svg viewBox="0 0 24 24"><path d="M12 3 4 6v6c0 4.5 3.4 8.3 8 9 4.6-.7 8-4.5 8-9V6Z"/><path d="m8.5 12 2.5 2.5 4.5-5"/></svg>',
   ];
-  const ARROW = '<svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>';
-
+  
   /* ---------- Рендер контента ---------- */
   function setText(key, value) {
     $$(`[data-text="${key}"]`).forEach((el) => { el.textContent = value; });
@@ -261,7 +272,8 @@
     const html = set.map((w) => `<span class="marquee__item">${esc(w)}${glyph}</span>`).join('');
     $('#marquee').innerHTML = html + html;
 
-    renderTimeline();
+    renderAchievements();
+    renderLearning();
     renderLinks();
   }
 
@@ -280,24 +292,102 @@
     }).join('');
   }
 
-  function renderTimeline() {
-    const list = $('#timeline');
+  const EXT = '<svg viewBox="0 0 24 24"><path d="M7 17 17 7M8 7h9v9"/></svg>';
+  const pills = (links) => (links || []).filter((l) => l && l.url)
+    .map((l) => `<a class="pill" href="${esc(l.url)}" target="_blank" rel="noopener">${esc(tr(l.label))}</a>`).join('');
+  const certButton = (group, index, cert, label) => `
+    <button class="cert-btn" type="button" data-cert-group="${group}" data-cert-index="${index}">
+      <span class="cert-btn__paper"><img src="${esc(cert.thumb || cert.img)}" alt="" loading="lazy"></span>
+      <span>${esc(label)}</span>
+    </button>`;
+
+  // сертификаты по группам — для листания в просмотрщике
+  const certGroups = {};
+
+  function renderAchievements() {
+    $('#highlights').innerHTML = (SITE.highlights || []).map((h) => `
+      <li class="highlight">
+        <span class="highlight__value">${esc(tr(h.value))}</span>
+        <span class="highlight__label">${esc(tr(h.label))}</span>
+      </li>`).join('');
+    $('#highlights').hidden = !(SITE.highlights || []).length;
+
+    const list = $('#achList');
     const items = SITE.achievements || [];
     if (!items.length) {
-      list.innerHTML = `<li class="card reveal" style="text-align:center">${esc(t('achievements.empty'))}</li>`;
+      list.innerHTML = `<p class="card" style="text-align:center">${esc(t('achievements.empty'))}</p>`;
       return;
     }
-    list.innerHTML = items.map((a) => `
-      <li class="tl-item">
-        <span class="tl-item__marker" aria-hidden="true"></span>
-        <span class="tl-item__date">${esc(tr(a.date))}</span>
-        <article class="card tl-card spot reveal">
-          <span class="tl-card__place">${esc(tr(a.place))}</span>
-          <h3 class="tl-card__title">${esc(tr(a.title))}</h3>
-          <p class="tl-card__text">${esc(tr(a.text))}</p>
-          ${a.link ? `<a class="link-arrow" href="${esc(a.link)}" target="_blank" rel="noopener">${esc(t('achievements.more'))}</a>` : ''}
-        </article>
+    certGroups.ach = [];
+    list.innerHTML = items.map((a, i) => {
+      let cert = '';
+      if (a.cert) {
+        certGroups.ach.push({ ...a.cert, title: tr(a.title) });
+        cert = certButton('ach', certGroups.ach.length - 1, a.cert, t('achievements.cert'));
+      }
+      const date = tr(a.date);
+      return `
+        <article class="card ach spot reveal"${i % 2 ? ' data-delay="1"' : ''}>
+          <div class="ach__top">
+            ${a.badge ? `<span class="ach__badge">${esc(tr(a.badge))}</span>` : '<span></span>'}
+            ${date ? `<span class="ach__date mono">${esc(date)}</span>` : ''}
+          </div>
+          <h3 class="ach__title">${esc(tr(a.title))}</h3>
+          ${a.place ? `<p class="ach__place">${esc(tr(a.place))}</p>` : ''}
+          <p class="ach__text">${esc(tr(a.text))}</p>
+          <div class="ach__foot">
+            <div class="pills">${pills(a.links)}</div>
+            ${cert}
+          </div>
+        </article>`;
+    }).join('');
+  }
+
+  const LOGOS = { Kaggle: 'K', 'ML Compete': 'ML', 'Hugging Face': 'HF' };
+
+  function renderLearning() {
+    $('#learnNow').innerHTML = (SITE.learningNow || []).map((c) => `
+      <li class="learn-now__item">
+        <span class="learn-now__dot" aria-hidden="true"></span>
+        <span class="learn-now__title">${esc(tr(c.title))}</span>
+        <span class="learn-now__org">${esc(tr(c.org))}</span>
+        ${c.link ? `<a class="learn-now__link" href="${esc(c.link)}" target="_blank" rel="noopener" aria-label="${esc(t('learning.open'))}">${EXT}</a>` : ''}
       </li>`).join('');
+
+    $('#practice').innerHTML = (SITE.practice || []).map((p) => `
+      <li>
+        <a class="practice__item" href="${esc(p.url)}" target="_blank" rel="noopener">
+          <span class="practice__logo" aria-hidden="true">${esc(LOGOS[p.title] || p.title.slice(0, 2))}</span>
+          <span class="practice__title">${esc(p.title)}<span class="mono">${esc(p.handle || '')}</span></span>
+          <span class="practice__text">${esc(tr(p.text))}</span>
+          <svg class="practice__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+        </a>
+      </li>`).join('');
+
+    $('#courses').innerHTML = (SITE.courses || []).map((c) => `
+      <li class="course">
+        <span class="course__title">${esc(tr(c.title))}</span>
+        <span class="course__org">${esc(tr(c.org))}</span>
+        <span class="course__side">
+          ${c.date ? `<span class="course__date">${esc(tr(c.date))}</span>` : ''}
+          ${c.link ? `<a class="pill" href="${esc(c.link)}" target="_blank" rel="noopener">${esc(tr(c.linkLabel) || t('learning.open'))}</a>` : ''}
+        </span>
+      </li>`).join('');
+
+    const sc = SITE.siriusCourses;
+    const box = $('#sirius');
+    if (!sc || !(sc.certs || []).length) { box.hidden = true; return; }
+    certGroups.sirius = sc.certs.map((c) => ({ ...c, title: `${tr(sc.title)} — ${tr(c.title)}` }));
+    box.innerHTML = `
+      <h3 class="card__title mono">// ${esc(tr(sc.title))}</h3>
+      <p class="sirius__org">${esc(tr(sc.org))}</p>
+      <div class="sirius__grid">
+        ${sc.certs.map((c, i) => `
+          <button class="cert-btn sirius__cert" type="button" data-cert-group="sirius" data-cert-index="${i}">
+            <span class="cert-btn__paper"><img src="${esc(c.thumb || c.img)}" alt="" loading="lazy"></span>
+            <span class="sirius__name">${esc(tr(c.title))}<span class="sirius__date">${esc(tr(c.date))}</span></span>
+          </button>`).join('')}
+      </div>`;
   }
 
   function telegramInfo() {
@@ -343,32 +433,33 @@
   let currentCat = null;
 
   function projectCard(p, i, k) {
-    const href = p.link || p.repo || '';
-    const tag = href ? 'a' : 'div';
-    const attrs = href ? ` href="${esc(href)}" target="_blank" rel="noopener"` : '';
     const title = tr(p.title);
     const cover = p.image
       ? `<img src="${esc(p.image)}" alt="${esc(title)}" loading="lazy">`
       : meshSVG(hash(`project-${i}`), TONES[i % TONES.length]);
     const cat = tr(p.category);
     const tags = (p.tags || []).map(tr);
+    const links = pills(p.links);
     return `
-      <article class="project is-entering" style="animation-delay:${k * 80}ms">
-        <${tag} class="project__link"${attrs}>
-          <div class="project__cover">
+      <article class="project is-entering" style="animation-delay:${k * 70}ms">
+        <div class="project__link">
+          <div class="project__cover${p.image ? ' project__cover--img' : ''}">
             ${cover}
             <span class="project__index">${pad(i + 1)}</span>
             ${cat ? `<span class="project__cat">${esc(cat)}</span>` : ''}
+            ${p.badge ? `<span class="project__flag">${esc(tr(p.badge))}</span>` : ''}
           </div>
           <div class="project__body">
             <div class="project__top">
               <h3 class="project__title">${esc(title)}</h3>
-              <span class="project__go" aria-hidden="true">${ARROW}</span>
+              ${p.status ? `<span class="project__status">${esc(tr(p.status))}</span>` : ''}
             </div>
             <p class="project__desc">${esc(tr(p.desc))}</p>
             ${tags.length ? `<ul class="project__tags">${tags.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
+            ${p.note ? `<p class="project__note">${esc(tr(p.note))}</p>` : ''}
+            <div class="project__links">${links || `<span class="project__soon">${esc(t('portfolio.repoSoon'))}</span>`}</div>
           </div>
-        </${tag}>
+        </div>
       </article>`;
   }
 
@@ -398,7 +489,6 @@
 
     const list = projects.map((p, i) => ({ p, i })).filter(({ p }) => currentCat === '*' || catKey(p) === currentCat);
     grid.innerHTML = list.map(({ p, i }, k) => projectCard(p, i, k)).join('');
-    bindTilt();
   }
 
   function initPortfolio() {
@@ -409,19 +499,6 @@
       renderPortfolio();
     });
     renderPortfolio();
-  }
-
-  function bindTilt() {
-    if (!finePointer || reduceMotion) return;
-    $$('.project__link').forEach((card) => {
-      card.addEventListener('pointermove', (e) => {
-        const r = card.getBoundingClientRect();
-        const x = (e.clientX - r.left) / r.width - 0.5;
-        const y = (e.clientY - r.top) / r.height - 0.5;
-        card.style.transform = `perspective(900px) rotateX(${(-y * 5).toFixed(2)}deg) rotateY(${(x * 6).toFixed(2)}deg) translateY(-4px)`;
-      });
-      card.addEventListener('pointerleave', () => { card.style.transform = ''; });
-    });
   }
 
   /* ---------- Прелоадер и старт ---------- */
@@ -578,6 +655,7 @@
     const btn = $('#themeBtn');
     if (btn) btn.setAttribute('aria-label', t(currentTheme() === 'dark' ? 'aria.themeToLight' : 'aria.themeToDark'));
     if (themeColor) themeColor.setAttribute('content', currentTheme() === 'dark' ? '#050C0F' : '#FBFBFB');
+    paintTelegram();
   }
 
   function setTheme(next, origin) {
@@ -648,7 +726,6 @@
     const header = $('#header');
     const burger = $('#burger');
     const progress = $('#progress');
-    const timeline = $('#timeline');
     let lastY = window.scrollY, ticking = false;
 
     const onScroll = () => {
@@ -658,9 +735,6 @@
       header.classList.toggle('is-hidden', y > lastY && y > 500);
       lastY = y;
       progress.style.transform = `scaleX(${max > 0 ? y / max : 0})`;
-      const r = timeline.getBoundingClientRect();
-      const p = clamp((window.innerHeight * 0.6 - r.top) / r.height, 0, 1);
-      timeline.style.setProperty('--p', p.toFixed(3));
       ticking = false;
     };
     window.addEventListener('scroll', () => {
@@ -674,6 +748,10 @@
       burger.dataset.i18nAttr = `aria-label:${open ? 'aria.menuClose' : 'aria.menuOpen'}`;
       burger.setAttribute('aria-label', t(open ? 'aria.menuClose' : 'aria.menuOpen'));
       document.body.classList.toggle('is-locked', open);
+      if (open !== header.classList.contains('tg-back')) {
+        header.classList.toggle('tg-back', open);
+        tgBack(open ? () => setMenu(false) : null);
+      }
     };
     burger.addEventListener('click', () => setMenu(!header.classList.contains('is-open')));
     $$('.nav a').forEach((a) => a.addEventListener('click', () => setMenu(false)));
@@ -720,7 +798,7 @@
   }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
 
   function observeReveal() {
-    $$('.reveal:not(.is-visible), .tl-item:not(.is-visible), .stack-card:not(.is-visible), .card--stats:not(.is-visible), .footer__big:not(.is-visible)')
+    $$('.reveal:not(.is-visible), .stack-card:not(.is-visible), .card--stats:not(.is-visible), .footer__big:not(.is-visible)')
       .forEach((el) => revealIO.observe(el));
   }
 
@@ -878,6 +956,120 @@
     });
   }
 
+  /* ---------- Telegram (Mini App и встроенный браузер) ---------- */
+  let tgApp = null;
+  const tgBackHandlers = [];
+
+  function tgBack(handler) {
+    if (!tgApp || !tgApp.BackButton) return;
+    if (handler) tgBackHandlers.push(handler);
+    else tgBackHandlers.pop();
+    if (tgBackHandlers.length) tgApp.BackButton.show();
+    else tgApp.BackButton.hide();
+  }
+
+  function paintTelegram() {
+    if (!tgApp) return;
+    const color = currentTheme() === 'dark' ? '#050C0F' : '#FBFBFB';
+    try {
+      tgApp.setHeaderColor(color);
+      tgApp.setBackgroundColor(color);
+      if (tgApp.setBottomBarColor) tgApp.setBottomBarColor(color);
+    } catch (_) { /* старые версии Telegram */ }
+  }
+
+  function initTelegram() {
+    if (!root.classList.contains('in-telegram')) return;
+    let tries = 0;
+    const boot = () => {
+      const tg = window.Telegram && window.Telegram.WebApp;
+      if (!tg) { if (++tries < 50) setTimeout(boot, 100); return; }
+      if (!tg.initData) return; // обычная ссылка во встроенном браузере — всё работает как на сайте
+      tgApp = tg;
+      root.classList.add('tg-app');
+      tg.ready();
+      tg.expand();
+      if (tg.disableVerticalSwipes) tg.disableVerticalSwipes();
+      // тема Telegram, если пользователь сам не выбирал
+      if (!store.get('theme') && tg.colorScheme) setTheme(tg.colorScheme);
+      tg.onEvent('themeChanged', () => { if (!store.get('theme')) setTheme(tg.colorScheme); });
+      tg.BackButton.onClick(() => { const h = tgBackHandlers[tgBackHandlers.length - 1]; if (h) h(); });
+      paintTelegram();
+      // внешние ссылки — через Telegram, чтобы не закрывать приложение
+      document.addEventListener('click', (e) => {
+        const a = e.target.closest('a[target="_blank"]');
+        if (!a || e.defaultPrevented) return;
+        e.preventDefault();
+        if (/^https:\/\/t\.me\//.test(a.href)) tg.openTelegramLink(a.href);
+        else tg.openLink(a.href);
+      });
+    };
+    boot();
+  }
+
+  /* ---------- Просмотр сертификатов ---------- */
+  function initViewer() {
+    const dlg = $('#viewer');
+    if (!dlg || typeof dlg.showModal !== 'function') return;
+    const img = $('#viewerImg'), title = $('#viewerTitle'), pdf = $('#viewerPdf'), count = $('#viewerCount');
+    const prev = $('[data-viewer="prev"]', dlg), next = $('[data-viewer="next"]', dlg);
+    let group = [], idx = 0;
+
+    const show = (i) => {
+      idx = (i + group.length) % group.length;
+      const c = group[idx];
+      img.style.animation = 'none';
+      void img.offsetWidth;
+      img.style.animation = '';
+      img.src = c.img;
+      img.alt = c.title || '';
+      title.textContent = c.title || '';
+      pdf.hidden = !c.pdf;
+      if (c.pdf) pdf.href = c.pdf;
+      const many = group.length > 1;
+      prev.hidden = next.hidden = !many;
+      count.textContent = many ? `${idx + 1} ${t('viewer.of')} ${group.length}` : '';
+    };
+    const close = () => { if (dlg.open) dlg.close(); };
+
+    document.addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-cert-group]');
+      if (!btn) return;
+      group = certGroups[btn.dataset.certGroup] || [];
+      if (!group.length) return;
+      show(Number(btn.dataset.certIndex) || 0);
+      dlg.showModal();
+      document.body.classList.add('is-locked');
+      tgBack(close);
+    });
+    dlg.addEventListener('click', (e) => {
+      const action = e.target.closest('[data-viewer]');
+      if (action) {
+        if (action.dataset.viewer === 'close') close();
+        else show(idx + (action.dataset.viewer === 'next' ? 1 : -1));
+        return;
+      }
+      if (e.target === dlg || e.target.classList.contains('viewer__stage')) close();
+    });
+    dlg.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowRight' && group.length > 1) show(idx + 1);
+      if (e.key === 'ArrowLeft' && group.length > 1) show(idx - 1);
+    });
+    // свайп по картинке на телефоне
+    let x0 = null;
+    img.addEventListener('touchstart', (e) => { x0 = e.touches[0].clientX; }, { passive: true });
+    img.addEventListener('touchend', (e) => {
+      if (x0 === null || group.length < 2) return;
+      const dx = e.changedTouches[0].clientX - x0;
+      if (Math.abs(dx) > 50) show(idx + (dx < 0 ? 1 : -1));
+      x0 = null;
+    });
+    dlg.addEventListener('close', () => {
+      if (!$('#header').classList.contains('is-open')) document.body.classList.remove('is-locked');
+      tgBack(null);
+    });
+  }
+
   /* ---------- Запуск ---------- */
   applyUI();
   renderContent();
@@ -891,6 +1083,8 @@
   initPointerFx();
   initCopy();
   initForm();
+  initViewer();
+  initTelegram();
   $('#year').textContent = new Date().getFullYear();
 
   initIntro(() => {
