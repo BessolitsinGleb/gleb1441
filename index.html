@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Бессолицин Глеб — gleb1441</title>
+  <meta name="description" content="Бессолицин Глеб (gleb1441) — разработчик. Портфолио, достижения и контакты.">
+  <meta name="author" content="Бессолицин Глеб">
+  <meta name="theme-color" content="#01070A">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Бессолицин Глеб — gleb1441">
+  <meta property="og:description" content="Разработчик. Портфолио, достижения и контакты.">
+  <!-- ✏️ После публикации замените на полный адрес: https://<user>.github.io/<repo>/assets/img/avatar.jpg -->
+  <meta property="og:image" content="assets/img/avatar.jpg">
+
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Unbounded:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <!-- Прелоадер -->
+  <div class="preloader" id="preloader" aria-hidden="true">
+    <div class="preloader__inner">
+      <svg class="preloader__mark" viewBox="0 0 100 100">
+        <path d="M50 8 L92 84 L8 84 Z" />
+        <path d="M50 8 L50 84 M29 46 L71 46" />
+      </svg>
+      <span class="preloader__nick">gleb1441</span>
+    </div>
+  </div>
+
+  <div class="progress" id="progress"></div>
+
+  <!-- Шапка -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="#top" class="brand" aria-label="gleb1441 — наверх">
+        <span class="avatar">
+          <svg class="avatar__ring" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="47" /></svg>
+          <span class="avatar__img"><img src="assets/img/avatar.webp" width="512" height="512" alt="Аватар gleb1441"></span>
+          <span class="avatar__dot" aria-hidden="true"></span>
+          <span class="avatar__bubble" aria-hidden="true">привет!</span>
+        </span>
+        <span class="brand__text">
+          <span class="brand__nick">gleb1441</span>
+          <span class="brand__name">Бессолицин Глеб</span>
+        </span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Основная навигация">
+        <a href="#about" class="nav__link"><span class="nav__num">01</span>Обо мне</a>
+        <a href="#achievements" class="nav__link"><span class="nav__num">02</span>Достижения</a>
+        <a href="#portfolio" class="nav__link"><span class="nav__num">03</span>Портфолио</a>
+        <a href="#contact" class="nav__link"><span class="nav__num">04</span>Связаться</a>
+      </nav>
+
+      <div class="header__actions">
+        <a class="icon-btn" href="https://github.com/BessolitsinGleb" target="_blank" rel="noopener" aria-label="GitHub" data-link="github">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.7 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+        </a>
+        <a class="btn btn--primary btn--sm magnetic" href="#contact"><span>Связаться</span></a>
+        <button class="burger" id="burger" aria-label="Открыть меню" aria-expanded="false" aria-controls="nav">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <div class="container hero__grid">
+        <div class="hero__content">
+          <p class="eyebrow hero__anim" data-bind="status"><span class="pulse" aria-hidden="true"></span><span data-text="status">Открыт для новых проектов</span></p>
+
+          <h1 class="hero__title" aria-label="Бессолицин Глеб">
+            <span class="line"><span>Бессолицин</span></span>
+            <span class="line line--accent"><span>Глеб</span></span>
+          </h1>
+
+          <p class="hero__role hero__anim">
+            <span data-text="role">Разработчик</span><span class="hero__slash">/</span><span class="typed" id="typed"></span>
+          </p>
+
+          <p class="hero__lead hero__anim" data-text="tagline"></p>
+
+          <div class="hero__cta hero__anim">
+            <a class="btn btn--primary magnetic" href="#contact">
+              <span>Обсудить проект</span>
+              <svg class="btn__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </a>
+            <a class="btn btn--ghost magnetic" href="#portfolio"><span>Смотреть работы</span></a>
+          </div>
+
+          <ul class="hero__meta hero__anim">
+            <li><span class="mono">ник</span> gleb1441</li>
+            <li><a href="https://github.com/BessolitsinGleb" target="_blank" rel="noopener" data-link="github" class="link-arrow">GitHub</a></li>
+            <li data-bind="telegram"><a href="#" target="_blank" rel="noopener" data-link="telegram" class="link-arrow">Telegram</a></li>
+          </ul>
+        </div>
+
+        <div class="hero__visual" aria-hidden="true">
+          <div class="facade">
+            <canvas id="facade"></canvas>
+            <div class="facade__tag">
+              <span>G/</span>
+              <span>1441</span>
+            </div>
+            <div class="facade__coords mono">palette · 05</div>
+          </div>
+          <ul class="swatches">
+            <li style="--c:#01070A" data-hex="#01070A"><span>#01070A</span></li>
+            <li style="--c:#46656F" data-hex="#46656F"><span>#46656F</span></li>
+            <li style="--c:#8FABB7" data-hex="#8FABB7"><span>#8FABB7</span></li>
+            <li style="--c:#D8DFE5" data-hex="#D8DFE5"><span>#D8DFE5</span></li>
+            <li style="--c:#FBFBFB" data-hex="#FBFBFB"><span>#FBFBFB</span></li>
+          </ul>
+        </div>
+      </div>
+
+      <a href="#about" class="scroll-cue hero__anim" aria-label="Прокрутить вниз">
+        <span class="scroll-cue__line"></span>
+        <span class="mono">листайте</span>
+      </a>
+    </section>
+
+    <!-- Бегущая строка -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track" id="marquee"></div>
+    </div>
+
+    <!-- ============ 01 ОБО МНЕ ============ -->
+    <section class="section" id="about">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__num mono">(01)</span>
+          <h2 class="section__title">Обо мне</h2>
+          <span class="section__line"></span>
+        </header>
+
+        <div class="bento">
+          <article class="card card--lead spot reveal">
+            <p class="about__lead" data-text="aboutLead"></p>
+            <div class="about__text" id="aboutText"></div>
+          </article>
+
+          <aside class="card card--dark card--facts spot reveal" data-delay="1">
+            <div class="facts__head">
+              <span class="mono">// профиль</span>
+              <svg class="facts__glyph" viewBox="0 0 40 40" aria-hidden="true"><path d="M20 3 37 35H3Z"/><path d="M20 3v32"/></svg>
+            </div>
+            <dl class="facts" id="facts"></dl>
+            <a href="https://github.com/BessolitsinGleb" target="_blank" rel="noopener" class="facts__gh" data-link="github">
+              <span>github.com/BessolitsinGleb</span>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+            </a>
+          </aside>
+
+          <article class="card card--skills spot reveal">
+            <h3 class="card__title mono">// навыки</h3>
+            <div class="skills" id="skills"></div>
+          </article>
+
+          <article class="card card--stats spot reveal" data-delay="1">
+            <div class="stats" id="stats"></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 02 ДОСТИЖЕНИЯ ============ -->
+    <section class="section section--mist" id="achievements">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__num mono">(02)</span>
+          <h2 class="section__title">Достижения</h2>
+          <span class="section__line"></span>
+        </header>
+
+        <ol class="timeline" id="timeline"></ol>
+      </div>
+    </section>
+
+    <!-- ============ 03 ПОРТФОЛИО ============ -->
+    <section class="section" id="portfolio">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__num mono">(03)</span>
+          <h2 class="section__title">Портфолио</h2>
+          <span class="section__line"></span>
+        </header>
+
+        <div class="filters reveal" id="filters" role="tablist" aria-label="Фильтр проектов"></div>
+        <div class="projects" id="projects"></div>
+
+        <div class="portfolio__more reveal">
+          <p>Больше кода и экспериментов — на GitHub</p>
+          <a class="btn btn--ghost magnetic" href="https://github.com/BessolitsinGleb" target="_blank" rel="noopener" data-link="github">
+            <span>Открыть GitHub</span>
+            <svg class="btn__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 04 СВЯЗАТЬСЯ ============ -->
+    <section class="contact" id="contact">
+      <div class="contact__glow" aria-hidden="true"></div>
+      <div class="container">
+        <header class="section__head section__head--light reveal">
+          <span class="section__num mono">(04)</span>
+          <h2 class="section__title">Связаться</h2>
+          <span class="section__line"></span>
+        </header>
+
+        <div class="contact__grid">
+          <div class="contact__info">
+            <h3 class="contact__title reveal">Есть задача? <br><span>Давайте обсудим.</span></h3>
+            <p class="contact__text reveal">Напишите в Telegram, на почту или оставьте заявку в форме — отвечу в течение дня.</p>
+
+            <div class="channels">
+              <a class="channel channel--tg spot reveal" href="#" target="_blank" rel="noopener" data-link="telegram" data-bind="telegram-card">
+                <span class="channel__icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21.9 4.3 18.7 19.5c-.24 1.07-.87 1.33-1.76.83l-4.87-3.59-2.35 2.26c-.26.26-.48.48-.98.48l.35-4.96 9.03-8.16c.39-.35-.09-.54-.61-.2L6.36 13.2l-4.8-1.5c-1.05-.33-1.07-1.05.22-1.55L20.5 2.9c.87-.32 1.63.2 1.4 1.4Z"/></svg>
+                </span>
+                <span class="channel__body">
+                  <span class="channel__label mono">Telegram</span>
+                  <span class="channel__value" data-text="telegramHandle">@username</span>
+                </span>
+                <svg class="channel__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+              </a>
+
+              <div class="channel channel--mail spot reveal" data-delay="1">
+                <a class="channel__main" href="#" data-link="email">
+                  <span class="channel__icon">
+                    <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+                  </span>
+                  <span class="channel__body">
+                    <span class="channel__label mono">Почта</span>
+                    <span class="channel__value" data-text="emailText">почта скоро появится</span>
+                  </span>
+                </a>
+                <button class="copy-btn" type="button" id="copyEmail" aria-label="Скопировать почту">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h8"/></svg>
+                </button>
+              </div>
+
+              <a class="channel channel--gh spot reveal" data-delay="2" href="https://github.com/BessolitsinGleb" target="_blank" rel="noopener" data-link="github">
+                <span class="channel__icon">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.92c.58.1.79-.25.79-.56v-2c-3.2.7-3.87-1.37-3.87-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.25-1.28-5.25-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.7 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg>
+                </span>
+                <span class="channel__body">
+                  <span class="channel__label mono">GitHub</span>
+                  <span class="channel__value">BessolitsinGleb</span>
+                </span>
+                <svg class="channel__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <form class="form reveal" id="contactForm" data-delay="1" novalidate>
+            <div class="form__head">
+              <span class="mono">// заявка</span>
+              <span class="form__hint">Все поля обязательны</span>
+            </div>
+
+            <fieldset class="topics">
+              <legend class="topics__legend">Тема</legend>
+              <label><input type="radio" name="topic" value="Сайт" checked><span>Сайт</span></label>
+              <label><input type="radio" name="topic" value="Приложение"><span>Приложение</span></label>
+              <label><input type="radio" name="topic" value="Сотрудничество"><span>Сотрудничество</span></label>
+              <label><input type="radio" name="topic" value="Другое"><span>Другое</span></label>
+            </fieldset>
+
+            <div class="field">
+              <input id="f-name" name="name" type="text" placeholder=" " required autocomplete="name" maxlength="80">
+              <label for="f-name">Как вас зовут</label>
+            </div>
+            <div class="field">
+              <input id="f-contact" name="contact" type="text" placeholder=" " required maxlength="120">
+              <label for="f-contact">Почта или Telegram для ответа</label>
+            </div>
+            <div class="field">
+              <textarea id="f-message" name="message" rows="4" placeholder=" " required maxlength="3000"></textarea>
+              <label for="f-message">Расскажите о задаче</label>
+            </div>
+            <!-- антиспам: поле скрыто от людей -->
+            <input type="text" name="_honey" class="honey" tabindex="-1" autocomplete="off">
+
+            <button class="btn btn--light btn--block magnetic" type="submit" id="formSubmit">
+              <span class="btn__label">Отправить заявку</span>
+              <svg class="btn__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </button>
+            <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+
+      <footer class="footer">
+        <div class="container">
+          <div class="footer__big" aria-hidden="true">gleb1441</div>
+          <div class="footer__row">
+            <span>© <span id="year">2026</span> Бессолицин Глеб</span>
+            <span class="mono footer__palette">
+              <i style="--c:#01070A"></i><i style="--c:#46656F"></i><i style="--c:#8FABB7"></i><i style="--c:#D8DFE5"></i><i style="--c:#FBFBFB"></i>
+            </span>
+            <a href="#top" class="link-arrow link-arrow--up">Наверх</a>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="assets/js/content.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
