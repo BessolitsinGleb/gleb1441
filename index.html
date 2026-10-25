@@ -41,6 +41,8 @@
       if (t !== 'light' && t !== 'dark') t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
       if (l !== 'ru' && l !== 'en') l = /^ru|^be|^uk|^kk/i.test(navigator.language || 'ru') ? 'ru' : 'en';
       d.setAttribute('data-theme', t);
+      // версия сайта: должна совпадать с version.json (см. README)
+      window.SITE_VERSION = '12';
       d.lang = l;
       d.classList.add('js');
       // открыт внутри Telegram (Mini App или встроенный браузер)
@@ -54,7 +56,7 @@
     })();
   </script>
   <!-- ?v=… — версия файлов: увеличьте число после правок, чтобы браузеры сразу подхватили изменения -->
-  <link rel="stylesheet" href="assets/css/style.css?v=11">
+  <link rel="stylesheet" href="assets/css/style.css?v=12">
 </head>
 <body>
 
@@ -449,7 +451,25 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="assets/js/content.js?v=11"></script>
-  <script src="assets/js/main.js?v=11"></script>
+  <!-- автообновление: если браузер (например, встроенный в Telegram) показал страницу из кэша,
+       а на сервере уже новая версия — перезагружаемся на свежую -->
+  <script>
+    (function () {
+      if (!window.fetch || !window.URL) return;
+      fetch('version.json?t=' + Date.now(), { cache: 'no-store' })
+        .then(function (r) { return r.ok ? r.json() : null; })
+        .then(function (d) {
+          if (!d || !d.version || String(d.version) === window.SITE_VERSION) return;
+          var key = 'gleb1441:reloaded-' + d.version;
+          try { if (sessionStorage.getItem(key)) return; sessionStorage.setItem(key, '1'); } catch (e) {}
+          var u = new URL(location.href);
+          u.searchParams.set('v', d.version);
+          location.replace(u.toString());
+        })
+        .catch(function () {});
+    })();
+  </script>
+  <script src="assets/js/content.js?v=12"></script>
+  <script src="assets/js/main.js?v=12"></script>
 </body>
 </html>
