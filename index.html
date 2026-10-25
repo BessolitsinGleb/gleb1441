@@ -28,6 +28,7 @@
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
+  <link rel="preload" as="image" href="assets/img/portrait.webp" imagesrcset="assets/img/portrait-620.webp 582w, assets/img/portrait.webp 985w" imagesizes="(max-width: 767px) 92vw, (max-width: 1099px) 70vw, 560px">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Montserrat:ital,wght@0,400..700;1,400..500&family=Playfair+Display:ital,wght@0,400..800;1,400..700&display=swap" rel="stylesheet">
@@ -53,7 +54,7 @@
     })();
   </script>
   <!-- ?v=… — версия файлов: увеличьте число после правок, чтобы браузеры сразу подхватили изменения -->
-  <link rel="stylesheet" href="assets/css/style.css?v=8">
+  <link rel="stylesheet" href="assets/css/style.css?v=9">
 </head>
 <body>
 
@@ -151,16 +152,20 @@
           </ul>
         </div>
 
-        <div class="hero__visual" aria-hidden="true">
-          <div class="facade">
-            <canvas id="facade"></canvas>
-            <div class="facade__tag">
+        <div class="hero__visual">
+          <div class="facade facade--portrait" id="portrait">
+            <svg class="portrait__shape" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 4 96 88H4Z"/><path d="M50 4v84"/></svg>
+            <img class="portrait__img" src="assets/img/portrait.webp"
+                 srcset="assets/img/portrait-620.webp 582w, assets/img/portrait.webp 985w"
+                 sizes="(max-width: 767px) 92vw, (max-width: 1099px) 70vw, 560px"
+                 width="985" height="1050" alt="Бессолицин Глеб" data-i18n-attr="alt:hero.photoAlt" fetchpriority="high">
+            <div class="facade__tag" aria-hidden="true">
               <span>G/</span>
               <span>1441</span>
             </div>
-            <div class="facade__coords mono">palette · 05</div>
+            <div class="facade__coords mono" aria-hidden="true">palette · 05</div>
           </div>
-          <ul class="swatches">
+          <ul class="swatches" aria-hidden="true">
             <li style="--c:#01070A" data-hex="#01070A"><span>#01070A</span></li>
             <li style="--c:#46656F" data-hex="#46656F"><span>#46656F</span></li>
             <li style="--c:#8FABB7" data-hex="#8FABB7"><span>#8FABB7</span></li>
@@ -444,7 +449,7 @@
 
   <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
-  <script src="assets/js/content.js?v=8"></script>
-  <script src="assets/js/main.js?v=8"></script>
+  <script src="assets/js/content.js?v=9"></script>
+  <script src="assets/js/main.js?v=9"></script>
 </body>
 </html>

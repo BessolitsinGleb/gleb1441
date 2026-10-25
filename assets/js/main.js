@@ -28,7 +28,7 @@
       'avatar.hi': 'привет!',
       'nav.about': 'Обо мне', 'nav.stack': 'Стек', 'nav.achievements': 'Достижения', 'nav.portfolio': 'Портфолио', 'nav.learning': 'Обучение', 'nav.contact': 'Связаться',
       'header.cta': 'Связаться',
-      'hero.cta1': 'Обсудить проект', 'hero.cta2': 'Мой стек', 'hero.nick': 'ник', 'hero.scroll': 'листайте',
+      'hero.photoAlt': 'Бессолицин Глеб — фото', 'hero.cta1': 'Обсудить проект', 'hero.cta2': 'Мой стек', 'hero.nick': 'ник', 'hero.scroll': 'листайте',
       'about.title': 'Обо мне', 'about.profile': '// профиль', 'about.qualities': '// личные качества',
       'about.cycle': '// полный цикл', 'about.cycleLead': 'От идеи до продакшена — без передачи проекта между подрядчиками',
       'stack.title': 'Стек', 'stack.kicker': 'Чем владею и с чем работаю каждый день',
@@ -67,7 +67,7 @@
       'avatar.hi': 'hi there!',
       'nav.about': 'About', 'nav.stack': 'Stack', 'nav.achievements': 'Achievements', 'nav.portfolio': 'Portfolio', 'nav.learning': 'Learning', 'nav.contact': 'Contact',
       'header.cta': "Let's talk",
-      'hero.cta1': 'Discuss a project', 'hero.cta2': 'My stack', 'hero.nick': 'nick', 'hero.scroll': 'scroll',
+      'hero.photoAlt': 'Gleb Bessolitsin — photo', 'hero.cta1': 'Discuss a project', 'hero.cta2': 'My stack', 'hero.nick': 'nick', 'hero.scroll': 'scroll',
       'about.title': 'About me', 'about.profile': '// profile', 'about.qualities': '// personal qualities',
       'about.cycle': '// full cycle', 'about.cycleLead': 'From idea to production — no hand-offs between contractors',
       'stack.title': 'Stack', 'stack.kicker': 'What I know and work with every day',
@@ -625,6 +625,28 @@
     };
   }
 
+  /* ---------- Портрет: лёгкий параллакс за курсором ---------- */
+  function initPortrait() {
+    const box = $('#portrait');
+    if (!box || !finePointer || reduceMotion) return;
+    let raf = 0, tx = 0, ty = 0, x = 0, y = 0;
+    const step = () => {
+      x += (tx - x) * 0.08;
+      y += (ty - y) * 0.08;
+      box.style.setProperty('--px', x.toFixed(3));
+      box.style.setProperty('--py', y.toFixed(3));
+      raf = Math.abs(tx - x) + Math.abs(ty - y) > 0.002 ? requestAnimationFrame(step) : 0;
+    };
+    const kick = () => { if (!raf) raf = requestAnimationFrame(step); };
+    box.addEventListener('pointermove', (e) => {
+      const r = box.getBoundingClientRect();
+      tx = (e.clientX - r.left) / r.width - 0.5;
+      ty = (e.clientY - r.top) / r.height - 0.5;
+      kick();
+    });
+    box.addEventListener('pointerleave', () => { tx = 0; ty = 0; kick(); });
+  }
+
   /* ---------- Печатающийся текст ---------- */
   const typed = { timer: 0 };
   function startTyped() {
@@ -1085,6 +1107,7 @@
   initForm();
   initViewer();
   initTelegram();
+  initPortrait();
   $('#year').textContent = new Date().getFullYear();
 
   initIntro(() => {

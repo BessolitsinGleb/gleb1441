@@ -1868,3 +1868,78 @@ body { font-size: 16px; line-height: 1.65; }
   font-variant-numeric: lining-nums;
 }
 .stat__value { font-variant-numeric: lining-nums tabular-nums; }
+
+/* ==========================================================================
+   ПОРТРЕТ НА ПЕРВОМ ЭКРАНЕ (вместо фасада из треугольников)
+   ========================================================================== */
+:root {
+  --portrait-bg:
+    radial-gradient(85% 60% at 60% 30%, rgba(255, 255, 255, .95) 0%, rgba(255, 255, 255, 0) 70%),
+    linear-gradient(170deg, #F3F5F7 0%, #D8DFE5 48%, #9FB6C1 100%);
+  --portrait-shape: rgba(70, 101, 111, .28);
+}
+:root[data-theme="dark"] {
+  --portrait-bg:
+    radial-gradient(80% 55% at 60% 30%, rgba(95, 132, 145, .55) 0%, rgba(70, 101, 111, 0) 72%),
+    linear-gradient(170deg, #1B323B 0%, #0E1D23 55%, #060E12 100%);
+  --portrait-shape: rgba(143, 171, 183, .22);
+}
+.facade--portrait { background: var(--portrait-bg); isolation: isolate; }
+.facade--portrait::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image:
+    linear-gradient(to right, var(--grid) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid) 1px, transparent 1px);
+  background-size: 44px 44px;
+  mask-image: radial-gradient(ellipse 70% 60% at 60% 35%, #000, transparent 75%);
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 60% 35%, #000, transparent 75%);
+}
+.facade--portrait::after { background: linear-gradient(180deg, transparent 72%, rgba(1, 7, 10, .28)); z-index: 1; }
+.portrait__shape {
+  position: absolute;
+  left: 50%;
+  top: 8%;
+  width: 92%;
+  fill: none;
+  stroke: var(--portrait-shape);
+  stroke-width: .5;
+  stroke-linejoin: round;
+  transform: translate(calc(-50% + var(--px, 0) * -14px), calc(var(--py, 0) * -10px)) rotate(calc(var(--px, 0) * -4deg));
+  animation: shapeSway 16s ease-in-out infinite alternate;
+}
+@keyframes shapeSway { from { rotate: -3deg; } to { rotate: 3deg; } }
+.portrait__img {
+  position: absolute;
+  right: -4%;
+  bottom: 0;
+  height: 92%;
+  width: auto;
+  max-width: none;
+  transform-origin: 60% 100%;
+  transform: translate3d(calc(var(--px, 0) * 14px), calc(var(--py, 0) * 6px), 0);
+  filter: drop-shadow(0 24px 40px rgba(1, 7, 10, .22));
+  transition: transform .2s linear;
+}
+[data-theme="dark"] .portrait__img { filter: drop-shadow(0 24px 50px rgba(0, 0, 0, .55)); }
+.facade--portrait .facade__tag, .facade--portrait .facade__coords { z-index: 2; }
+
+/* появление: фото поднимается снизу */
+.js .portrait__img { opacity: 0; translate: 0 8%; transition: opacity 1.2s var(--ease) .45s, translate 1.4s var(--ease) .45s, transform .2s linear; }
+.is-loaded .portrait__img { opacity: 1; translate: 0 0; }
+
+@media (max-width: 1099px) {
+  .facade--portrait { aspect-ratio: 1 / 1.02; max-height: 760px; }
+  .portrait__img { right: 0; height: 94%; }
+}
+@media (max-width: 767px) {
+  .facade--portrait { aspect-ratio: 1 / 1.08; }
+  .portrait__img { right: -2%; height: 93%; }
+  .portrait__shape { width: 100%; top: 6%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .js .portrait__img { opacity: 1; translate: 0 0; }
+  .portrait__shape { animation: none; }
+}
