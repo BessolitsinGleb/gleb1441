@@ -163,7 +163,7 @@ window.SITE = {
       date: { ru: 'Октябрь 2026', en: 'October 2026' },
       badge: { ru: '🏆 Лучший продукт смены', en: '🏆 Best product of the program' },
       title: { ru: 'Профильная смена «Информационные технологии» от Т-Банка', en: 'T-Bank “Information Technology” intensive program' },
-      place: { ru: 'Т-Банк × Сириус · очно, 19–24 октября', en: 'T-Bank × Sirius · on-site, Oct 19–24' },
+      place: { ru: 'Т-Банк × Сириус Приморье · очно, 19–24 октября', en: 'T-Bank × Sirius Primorye · on-site, Oct 19–24' },
       text: {
         ru: 'За неделю наша команда сделала два продукта. «Амба» — ИИ-гид по Приморскому краю, который собирает план поездки и проверяет, что он сходится с реальностью, — победил в номинации «Самый качественный и проработанный продукт». Второй — «Токенман», веб-аркада с пятью популярными играми. В «Амбе» отвечал за бэкенд.',
         en: 'In one week our team built two products. “Amba”, an AI travel guide for Primorsky Krai that builds a trip plan and checks it against reality, won “Most polished and well-crafted product”. The second one is “Tokenman”, a web arcade with five popular games. I was a backend developer on Amba.',
@@ -174,7 +174,7 @@ window.SITE = {
         { label: 'GitHub', url: 'https://github.com/BessolitsinGleb/AI-ta' },
         { label: { ru: 'Токенман', en: 'Tokenman' }, url: 'https://bessolitsingleb.github.io/Tokenman/' },
       ],
-      cert: { img: 'assets/certs/tbank-it-2026.webp', thumb: 'assets/certs/tbank-it-2026-thumb.webp' },
+      cert: { img: 'assets/certs/tbank-it-2026.webp', thumb: 'assets/certs/tbank-it-2026-thumb.webp', pdf: 'assets/certs/tbank-it-2026.pdf' },
     },
     {
       date: { ru: 'Май 2026', en: 'May 2026' },
@@ -335,7 +335,7 @@ window.SITE = {
     {
       title: { ru: 'Токенман', en: 'Tokenman' },
       category: { ru: 'Веб', en: 'Web' },
-      badge: { ru: 'Т-Банк × Сириус', en: 'T-Bank × Sirius' },
+      badge: { ru: 'Т-Банк × Сириус Приморье', en: 'T-Bank × Sirius Primorye' },
       desc: {
         ru: '«Токен Аркада» — веб-приложение с пятью аркадами: Токенман по мотивам классики, Флаппи, Блок-бласт, Бильярд и Три в ряд. Рекорды, профиль, звук, управление с клавиатуры и джойстик на телефоне.',
         en: '“Token Arcade” — a web app with five arcade games: Tokenman inspired by the classic, Flappy, Block Blast, Billiards and Match-3. High scores, a profile, sound, keyboard controls and an on-screen joystick on phones.',
