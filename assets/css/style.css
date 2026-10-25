@@ -1878,12 +1878,14 @@ body { font-size: 16px; line-height: 1.65; }
     linear-gradient(170deg, #F3F5F7 0%, #D8DFE5 48%, #9FB6C1 100%);
   --portrait-shape: rgba(70, 101, 111, .28);
 }
+/* в тёмной теме фото тоже на светлом фоне — только чуть приглушённом */
 :root[data-theme="dark"] {
   --portrait-bg:
-    radial-gradient(80% 55% at 60% 30%, rgba(95, 132, 145, .55) 0%, rgba(70, 101, 111, 0) 72%),
-    linear-gradient(170deg, #1B323B 0%, #0E1D23 55%, #060E12 100%);
-  --portrait-shape: rgba(143, 171, 183, .22);
+    radial-gradient(85% 60% at 60% 30%, rgba(240, 244, 246, .9) 0%, rgba(240, 244, 246, 0) 70%),
+    linear-gradient(170deg, #DDE4E9 0%, #C2CFD7 50%, #8FABB7 100%);
+  --portrait-shape: rgba(70, 101, 111, .3);
 }
+[data-theme="dark"] .facade--portrait::before { background-image: linear-gradient(to right, rgba(70, 101, 111, .08) 1px, transparent 1px), linear-gradient(to bottom, rgba(70, 101, 111, .08) 1px, transparent 1px); }
 .facade--portrait { background: var(--portrait-bg); isolation: isolate; }
 .facade--portrait::before {
   content: '';
@@ -1923,7 +1925,7 @@ body { font-size: 16px; line-height: 1.65; }
   filter: drop-shadow(0 24px 40px rgba(1, 7, 10, .22));
   transition: transform .2s linear;
 }
-[data-theme="dark"] .portrait__img { filter: drop-shadow(0 24px 50px rgba(0, 0, 0, .55)); }
+
 .facade--portrait .facade__tag, .facade--portrait .facade__coords { z-index: 2; }
 
 /* появление: фото поднимается снизу */
