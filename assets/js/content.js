@@ -350,8 +350,7 @@ window.SITE = {
       links: [{ label: { ru: 'Сайт', en: 'Website' }, url: 'https://bessolitsingleb.github.io/ussuri_mall/' }],
     },
     {
-      kind: 'client',
-      client: { ru: 'кейс Т-Банка', en: 'T-Bank case' },
+      kind: 'event',
       title: { ru: 'Токенман', en: 'Tokenman' },
       category: { ru: 'Веб', en: 'Web' },
       badge: { ru: 'Т-Банк × Сириус Приморье', en: 'T-Bank × Sirius Primorye' },
