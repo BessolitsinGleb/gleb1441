@@ -1915,12 +1915,14 @@ body { font-size: 16px; line-height: 1.65; }
 @keyframes shapeSway { from { rotate: -3deg; } to { rotate: 3deg; } }
 .portrait__img {
   position: absolute;
-  right: -4%;
+  left: -50%;
+  right: -50%;
+  margin-inline: auto;
   bottom: 0;
   height: 92%;
   width: auto;
   max-width: none;
-  transform-origin: 60% 100%;
+  transform-origin: 50% 100%;
   transform: translate3d(calc(var(--px, 0) * 14px), calc(var(--py, 0) * 6px), 0);
   filter: drop-shadow(0 24px 40px rgba(1, 7, 10, .22));
   transition: transform .2s linear;
@@ -1934,11 +1936,11 @@ body { font-size: 16px; line-height: 1.65; }
 
 @media (max-width: 1099px) {
   .facade--portrait { aspect-ratio: 1 / 1.02; max-height: 760px; }
-  .portrait__img { right: 0; height: 94%; }
+  .portrait__img { height: 94%; }
 }
 @media (max-width: 767px) {
   .facade--portrait { aspect-ratio: 1 / 1.08; }
-  .portrait__img { right: -2%; height: 93%; }
+  .portrait__img { height: 93%; }
   .portrait__shape { width: 100%; top: 6%; }
 }
 @media (prefers-reduced-motion: reduce) {

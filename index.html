@@ -28,7 +28,7 @@
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
-  <link rel="preload" as="image" href="assets/img/portrait.webp?v=14" imagesrcset="assets/img/portrait-620.webp?v=14 582w, assets/img/portrait.webp?v=14 985w" imagesizes="(max-width: 767px) 92vw, (max-width: 1099px) 70vw, 560px">
+  <link rel="preload" as="image" href="assets/img/portrait.webp?v=15" imagesrcset="assets/img/portrait-620.webp?v=15 582w, assets/img/portrait.webp?v=15 985w" imagesizes="(max-width: 767px) 92vw, (max-width: 1099px) 70vw, 560px">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Montserrat:ital,wght@0,400..700;1,400..500&family=Playfair+Display:ital,wght@0,400..800;1,400..700&display=swap" rel="stylesheet">
@@ -42,7 +42,7 @@
       if (l !== 'ru' && l !== 'en') l = /^ru|^be|^uk|^kk/i.test(navigator.language || 'ru') ? 'ru' : 'en';
       d.setAttribute('data-theme', t);
       // версия сайта: должна совпадать с version.json (см. README)
-      window.SITE_VERSION = '14';
+      window.SITE_VERSION = '15';
       d.lang = l;
       d.classList.add('js');
       // открыт внутри Telegram (Mini App или встроенный браузер)
@@ -56,7 +56,7 @@
     })();
   </script>
   <!-- ?v=… — версия файлов: увеличьте число после правок, чтобы браузеры сразу подхватили изменения -->
-  <link rel="stylesheet" href="assets/css/style.css?v=14">
+  <link rel="stylesheet" href="assets/css/style.css?v=15">
 </head>
 <body>
 
@@ -157,8 +157,8 @@
         <div class="hero__visual">
           <div class="facade facade--portrait" id="portrait">
             <svg class="portrait__shape" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 4 96 88H4Z"/><path d="M50 4v84"/></svg>
-            <img class="portrait__img" src="assets/img/portrait.webp?v=14"
-                 srcset="assets/img/portrait-620.webp?v=14 582w, assets/img/portrait.webp?v=14 985w"
+            <img class="portrait__img" src="assets/img/portrait.webp?v=15"
+                 srcset="assets/img/portrait-620.webp?v=15 582w, assets/img/portrait.webp?v=15 985w"
                  sizes="(max-width: 767px) 92vw, (max-width: 1099px) 70vw, 560px"
                  width="985" height="1050" alt="Бессолицин Глеб" data-i18n-attr="alt:hero.photoAlt" fetchpriority="high">
             <div class="facade__tag" aria-hidden="true">
@@ -469,7 +469,7 @@
         .catch(function () {});
     })();
   </script>
-  <script src="assets/js/content.js?v=14"></script>
-  <script src="assets/js/main.js?v=14"></script>
+  <script src="assets/js/content.js?v=15"></script>
+  <script src="assets/js/main.js?v=15"></script>
 </body>
 </html>
