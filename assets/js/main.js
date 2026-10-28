@@ -35,7 +35,9 @@
       'achievements.title': 'Достижения', 'achievements.empty': 'Скоро здесь появятся достижения',
       'achievements.kicker': 'Хакатоны, олимпиады и проектные смены — с сертификатами', 'achievements.cert': 'Сертификат',
       'portfolio.title': 'Портфолио', 'portfolio.all': 'Все', 'portfolio.empty': 'Скоро здесь появятся работы',
-      'portfolio.kicker': 'Проекты с хакатонов и смен, заказы и пет-проекты', 'portfolio.repoSoon': 'репозиторий скоро',
+      'portfolio.kicker': 'Коммерческие проекты по ТЗ партнёров, хакатоны и пет-проекты', 'portfolio.repoSoon': 'репозиторий скоро',
+      'portfolio.kind.client': 'Коммерческий', 'portfolio.kind.event': 'Хакатон / смена', 'portfolio.kind.pet': 'Пет-проект',
+      'portfolio.details': 'Подробнее', 'portfolio.private': 'Код под NDA — подробно расскажу на созвоне',
       'learning.title': 'Обучение', 'learning.kicker': 'Постоянно учусь и проверяю знания на практике',
       'learning.now': '// сейчас изучаю', 'learning.practice': '// где практикуюсь', 'learning.courses': '// курсы и интенсивы',
       'learning.open': 'Открыть',
@@ -74,7 +76,9 @@
       'achievements.title': 'Achievements', 'achievements.empty': 'Achievements are coming soon',
       'achievements.kicker': 'Hackathons, olympiads and project programs — with certificates', 'achievements.cert': 'Certificate',
       'portfolio.title': 'Portfolio', 'portfolio.all': 'All', 'portfolio.empty': 'Projects are coming soon',
-      'portfolio.kicker': 'Hackathon projects, client work and side projects', 'portfolio.repoSoon': 'repository coming soon',
+      'portfolio.kicker': 'Commercial projects built to partners’ specs, hackathons and side projects', 'portfolio.repoSoon': 'repository coming soon',
+      'portfolio.kind.client': 'Commercial', 'portfolio.kind.event': 'Hackathon / program', 'portfolio.kind.pet': 'Side project',
+      'portfolio.details': 'Details', 'portfolio.private': 'Code under NDA — happy to walk you through it on a call',
       'learning.title': 'Learning', 'learning.kicker': 'Always learning — and testing it in practice',
       'learning.now': '// currently studying', 'learning.practice': '// where I practice', 'learning.courses': '// courses & intensives',
       'learning.open': 'Open',
@@ -440,6 +444,8 @@
     const cat = tr(p.category);
     const tags = (p.tags || []).map(tr);
     const links = pills(p.links);
+    const kind = p.kind ? [t(`portfolio.kind.${p.kind}`), tr(p.client)].filter(Boolean).join(' · ') : '';
+    const details = p.details ? [].concat(tr(p.details) || []) : [];
     return `
       <article class="project is-entering" style="animation-delay:${k * 70}ms">
         <div class="project__link">
@@ -454,10 +460,12 @@
               <h3 class="project__title">${esc(title)}</h3>
               ${p.status ? `<span class="project__status">${esc(tr(p.status))}</span>` : ''}
             </div>
+            ${kind ? `<span class="project__kind project__kind--${esc(p.kind)}">${esc(kind)}</span>` : ''}
             <p class="project__desc">${esc(tr(p.desc))}</p>
+            ${details.length ? `<details class="project__details"><summary>${esc(t('portfolio.details'))}</summary>${details.map((x) => `<p>${esc(x)}</p>`).join('')}</details>` : ''}
             ${tags.length ? `<ul class="project__tags">${tags.map((x) => `<li>${esc(x)}</li>`).join('')}</ul>` : ''}
             ${p.note ? `<p class="project__note">${esc(tr(p.note))}</p>` : ''}
-            <div class="project__links">${links || `<span class="project__soon">${esc(t('portfolio.repoSoon'))}</span>`}</div>
+            <div class="project__links">${links || `<span class="project__soon">${esc(t(p.private ? 'portfolio.private' : 'portfolio.repoSoon'))}</span>`}</div>
           </div>
         </div>
       </article>`;

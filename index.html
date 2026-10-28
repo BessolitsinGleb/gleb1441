@@ -28,7 +28,7 @@
   <link rel="icon" type="image/png" href="assets/img/favicon.png">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
 
-  <link rel="preload" as="image" href="assets/img/portrait.webp" imagesrcset="assets/img/portrait-620.webp 582w, assets/img/portrait.webp 985w" imagesizes="(max-width: 767px) 92vw, (max-width: 1099px) 70vw, 560px">
+  <link rel="preload" as="image" href="assets/img/portrait.webp?v=13" imagesrcset="assets/img/portrait-620.webp?v=13 582w, assets/img/portrait.webp?v=13 985w" imagesizes="(max-width: 767px) 92vw, (max-width: 1099px) 70vw, 560px">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Montserrat:ital,wght@0,400..700;1,400..500&family=Playfair+Display:ital,wght@0,400..800;1,400..700&display=swap" rel="stylesheet">
@@ -42,7 +42,7 @@
       if (l !== 'ru' && l !== 'en') l = /^ru|^be|^uk|^kk/i.test(navigator.language || 'ru') ? 'ru' : 'en';
       d.setAttribute('data-theme', t);
       // версия сайта: должна совпадать с version.json (см. README)
-      window.SITE_VERSION = '12';
+      window.SITE_VERSION = '13';
       d.lang = l;
       d.classList.add('js');
       // открыт внутри Telegram (Mini App или встроенный браузер)
@@ -56,7 +56,7 @@
     })();
   </script>
   <!-- ?v=… — версия файлов: увеличьте число после правок, чтобы браузеры сразу подхватили изменения -->
-  <link rel="stylesheet" href="assets/css/style.css?v=12">
+  <link rel="stylesheet" href="assets/css/style.css?v=13">
 </head>
 <body>
 
@@ -92,8 +92,8 @@
       <nav class="nav" id="nav" data-i18n-attr="aria-label:aria.nav" aria-label="Основная навигация">
         <a href="#about" class="nav__link"><span class="nav__num">01</span><span data-i18n="nav.about">Обо мне</span></a>
         <a href="#stack" class="nav__link"><span class="nav__num">02</span><span data-i18n="nav.stack">Стек</span></a>
-        <a href="#achievements" class="nav__link"><span class="nav__num">03</span><span data-i18n="nav.achievements">Достижения</span></a>
-        <a href="#portfolio" class="nav__link"><span class="nav__num">04</span><span data-i18n="nav.portfolio">Портфолио</span></a>
+        <a href="#portfolio" class="nav__link"><span class="nav__num">03</span><span data-i18n="nav.portfolio">Портфолио</span></a>
+        <a href="#achievements" class="nav__link"><span class="nav__num">04</span><span data-i18n="nav.achievements">Достижения</span></a>
         <a href="#learning" class="nav__link"><span class="nav__num">05</span><span data-i18n="nav.learning">Обучение</span></a>
         <a href="#contact" class="nav__link"><span class="nav__num">06</span><span data-i18n="nav.contact">Связаться</span></a>
         <div class="nav__extra">
@@ -157,8 +157,8 @@
         <div class="hero__visual">
           <div class="facade facade--portrait" id="portrait">
             <svg class="portrait__shape" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 4 96 88H4Z"/><path d="M50 4v84"/></svg>
-            <img class="portrait__img" src="assets/img/portrait.webp"
-                 srcset="assets/img/portrait-620.webp 582w, assets/img/portrait.webp 985w"
+            <img class="portrait__img" src="assets/img/portrait.webp?v=13"
+                 srcset="assets/img/portrait-620.webp?v=13 582w, assets/img/portrait.webp?v=13 985w"
                  sizes="(max-width: 767px) 92vw, (max-width: 1099px) 70vw, 560px"
                  width="985" height="1050" alt="Бессолицин Глеб" data-i18n-attr="alt:hero.photoAlt" fetchpriority="high">
             <div class="facade__tag" aria-hidden="true">
@@ -249,30 +249,15 @@
       </div>
     </section>
 
-    <!-- ============ 03 ДОСТИЖЕНИЯ ============ -->
-    <section class="section" id="achievements">
-      <div class="container">
-        <header class="section__head reveal">
-          <span class="section__num mono">(03)</span>
-          <h2 class="section__title" data-i18n="achievements.title">Достижения</h2>
-          <span class="section__line"></span>
-        </header>
-        <p class="section__kicker reveal" data-i18n="achievements.kicker">Хакатоны, олимпиады и проектные смены — с сертификатами</p>
-
-        <ul class="highlights reveal" id="highlights"></ul>
-        <div class="achievements" id="achList"></div>
-      </div>
-    </section>
-
-    <!-- ============ 04 ПОРТФОЛИО ============ -->
+    <!-- ============ 03 ПОРТФОЛИО ============ -->
     <section class="section" id="portfolio">
       <div class="container">
         <header class="section__head reveal">
-          <span class="section__num mono">(04)</span>
+          <span class="section__num mono">(03)</span>
           <h2 class="section__title" data-i18n="portfolio.title">Портфолио</h2>
           <span class="section__line"></span>
         </header>
-        <p class="section__kicker reveal" data-i18n="portfolio.kicker">Проекты с хакатонов и смен, заказы и пет-проекты</p>
+        <p class="section__kicker reveal" data-i18n="portfolio.kicker">Коммерческие проекты по ТЗ партнёров, хакатоны и пет-проекты</p>
 
         <div class="filters reveal" id="filters" role="tablist" data-i18n-attr="aria-label:aria.filters" aria-label="Фильтр проектов"></div>
         <div class="projects" id="projects"></div>
@@ -284,6 +269,21 @@
             <svg class="btn__arrow" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M8 7h9v9"/></svg>
           </a>
         </div>
+      </div>
+    </section>
+
+    <!-- ============ 04 ДОСТИЖЕНИЯ ============ -->
+    <section class="section" id="achievements">
+      <div class="container">
+        <header class="section__head reveal">
+          <span class="section__num mono">(04)</span>
+          <h2 class="section__title" data-i18n="achievements.title">Достижения</h2>
+          <span class="section__line"></span>
+        </header>
+        <p class="section__kicker reveal" data-i18n="achievements.kicker">Хакатоны, олимпиады и проектные смены — с сертификатами</p>
+
+        <ul class="highlights reveal" id="highlights"></ul>
+        <div class="achievements" id="achList"></div>
       </div>
     </section>
 
@@ -469,7 +469,7 @@
         .catch(function () {});
     })();
   </script>
-  <script src="assets/js/content.js?v=12"></script>
-  <script src="assets/js/main.js?v=12"></script>
+  <script src="assets/js/content.js?v=13"></script>
+  <script src="assets/js/main.js?v=13"></script>
 </body>
 </html>

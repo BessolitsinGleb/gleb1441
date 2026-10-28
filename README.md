@@ -23,7 +23,7 @@
 - 🧠 **ML** — классический ML, deep learning, computer vision, NLP, RL. PyTorch, scikit-learn, pandas, NumPy, Matplotlib
 - 🤖 **ИИ-агенты и боты** — агенты, чат-боты, RAG, модели через OpenRouter или LLM Proxy
 - ⚙️ **Бэкенд** — FastAPI, Pydantic, SQLAlchemy, WebSocket
-- 🗄 **Данные** — PostgreSQL (мой фаворит), Redis, любые SQL и NoSQL базы
+- 🗄 **Данные** — PostgreSQL, Redis, другие SQL и NoSQL базы
 - 🚀 **Деплой** — Docker, Git, Railway, Render, VPS
 - 💬 **Языки** — Python, SQL, JavaScript, Kotlin и немного C#
 

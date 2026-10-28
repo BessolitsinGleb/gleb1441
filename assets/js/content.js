@@ -46,21 +46,21 @@ window.SITE = {
 
   /* ---------- Обо мне ---------- */
   aboutLead: {
-    ru: 'ML-инженер и бэкенд-разработчик. Превращаю идеи в работающие продукты — от модели до продакшена.',
-    en: 'ML engineer and backend developer. I turn ideas into working products — from model to production.',
+    ru: 'ML-инженер и бэкенд-разработчик. Делаю ML-сервисы под реальные задачи — от данных и модели до API в продакшене.',
+    en: 'ML engineer and backend developer. I build ML services for real tasks — from data and models to a production API.',
   },
   aboutText: {
     ru: [
-      'Три года занимаюсь машинным обучением: классический ML, глубокое обучение, компьютерное зрение, NLP и обучение с подкреплением. Основные инструменты — PyTorch, scikit-learn, pandas, NumPy и Matplotlib.',
-      '3,5 года пишу бэкенд на FastAPI, Pydantic и SQLAlchemy. Разрабатываю ИИ-агентов, чат-ботов и API для них, модели подключаю через OpenRouter или LLM Proxy.',
-      'Беру проект с нуля и довожу до продакшена: Docker, Git, Redis, PostgreSQL (а при необходимости — любая SQL или NoSQL база), деплой на Railway, Render или VPS.',
-      'Живу и работаю во Владивостоке, но подстраиваюсь под часовой пояс клиента — созвоны и ответы в удобное для вас время.',
+      'Три года в машинном обучении и 3,5 года в бэкенде. За это время — коммерческие проекты по ТЗ партнёров: рекомендательная система для МГПУ, многоагентное обучение с подкреплением для горной техники «ДСТ-Урал», NLP-модели на медицинских текстах для Сбера, а также заказные сайты и сервисы.',
+      'В ML работаю с классическими моделями, глубоким обучением, компьютерным зрением, NLP и обучением с подкреплением: PyTorch, scikit-learn, CatBoost, LightGBM, Hugging Face. Строю честную валидацию и подбираю решение под метрику заказчика.',
+      'В бэкенде — FastAPI, Pydantic, SQLAlchemy и WebSocket. Делаю ИИ-агентов, чат-ботов и RAG, подключаю модели через OpenRouter или LLM Proxy, работаю с PostgreSQL, Redis и другими SQL и NoSQL базами. Проект сдаю под ключ: Docker, Git, деплой на Railway, Render или VPS.',
+      'Живу во Владивостоке, работаю удалённо и подстраиваюсь под часовой пояс команды — созвоны и ответы в удобное для вас время.',
     ],
     en: [
-      'Three years in machine learning: classic ML, deep learning, computer vision, NLP and reinforcement learning. My main tools are PyTorch, scikit-learn, pandas, NumPy and Matplotlib.',
-      '3.5 years building backends with FastAPI, Pydantic and SQLAlchemy. I develop AI agents, chatbots and the APIs behind them, connecting models via OpenRouter or LLM Proxy.',
-      'I take projects from scratch to production: Docker, Git, Redis, PostgreSQL (or any SQL / NoSQL database when needed), deployed to Railway, Render or a VPS.',
-      'I live and work in Vladivostok, but adapt to the client’s time zone — calls and replies at a time that suits you.',
+      'Three years in machine learning and 3.5 years in backend. Along the way — commercial projects built to partners’ specs: a course recommender for Moscow City University, multi-agent reinforcement learning for DST-Ural mining machinery, NLP models on medical texts for Sber, plus client websites and services.',
+      'In ML I work with classic models, deep learning, computer vision, NLP and reinforcement learning: PyTorch, scikit-learn, CatBoost, LightGBM, Hugging Face. I set up honest validation and tune the solution to the client’s metric.',
+      'On the backend — FastAPI, Pydantic, SQLAlchemy and WebSocket. I build AI agents, chatbots and RAG, connect models via OpenRouter or LLM Proxy, and work with PostgreSQL, Redis and other SQL and NoSQL databases. I deliver end to end: Docker, Git, deployment to Railway, Render or a VPS.',
+      'I live in Vladivostok, work remotely and adapt to the team’s time zone — calls and replies at a time that suits you.',
     ],
   },
   facts: [
@@ -109,7 +109,7 @@ window.SITE = {
   stack: [
     {
       title: 'Machine Learning',
-      items: ['PyTorch', 'scikit-learn', 'pandas', 'NumPy', 'Matplotlib'],
+      items: ['PyTorch', 'scikit-learn', 'CatBoost', 'LightGBM', 'Hugging Face', 'pandas', 'NumPy'],
       note: { ru: '3 года в машинном обучении', en: '3 years in machine learning' },
     },
     {
@@ -128,7 +128,7 @@ window.SITE = {
     {
       title: { ru: 'Базы данных', en: 'Databases' },
       items: ['PostgreSQL', 'Redis', 'SQL', 'NoSQL'],
-      note: { ru: 'Предпочитаю PostgreSQL, но работаю с любой СУБД', en: 'Prefer PostgreSQL, comfortable with any DBMS' },
+      note: { ru: 'Реляционные и NoSQL базы', en: 'Relational and NoSQL databases' },
     },
     {
       title: { ru: 'DevOps и деплой', en: 'DevOps & deploy' },
@@ -209,8 +209,8 @@ window.SITE = {
       title: { ru: 'Международный конкурс по ИИ «AI Challenge 2026»', en: 'International AI contest “AI Challenge 2026”' },
       place: { ru: 'Альянс в сфере ИИ × Сбер', en: 'AI Alliance × Sber' },
       text: {
-        ru: 'Наша команда вошла в десятку лучших. На кейсе от Сбера разрабатывали классификатор медицинских текстов: модель по описанию диагноза определяет степень тяжести и срочность.',
-        en: 'Our team made the top ten. On Sber’s case we built a medical text classifier: given a diagnosis description, the model predicts severity and urgency.',
+        ru: 'Наша команда вошла в десятку лучших: 66,9 из 70 баллов за точность. Кейс от Сбера — анализ клинических рекомендаций: модель определяет, применим ли пункт рекомендации к протоколу осмотра пациента. Подробности — в портфолио.',
+        en: 'Our team made the top ten with 66.9 of 70 accuracy points. Sber’s case was clinical guideline analysis: the model decides whether a guideline item applies to a patient’s examination record. Details are in the portfolio.',
       },
       cert: { img: 'assets/certs/ai-challenge-2026.webp', thumb: 'assets/certs/ai-challenge-2026-thumb.webp' },
     },
@@ -246,6 +246,80 @@ window.SITE = {
      category можно задать объектом { ru, en } — фильтры строятся автоматически. */
   projects: [
     {
+      kind: 'client',
+      client: { ru: 'по ТЗ «ДСТ-Урал»', en: 'spec by DST-Ural' },
+      title: { ru: 'Многоагентное управление техникой в карьере', en: 'Multi-agent control of quarry machinery' },
+      category: 'ML',
+      badge: { ru: 'Прототип в симуляции', en: 'Working simulation prototype' },
+      desc: {
+        ru: 'Исследовал, может ли многоагентное обучение с подкреплением (MARL) координировать горную технику в карьере. Собрал свою среду с логистикой карьера и обучил агентов работать вместе: в симуляции они научились выполнять задачи и не мешать друг другу.',
+        en: 'Explored whether multi-agent reinforcement learning (MARL) can coordinate mining machinery in a quarry. I built a custom environment that models quarry logistics and trained agents to work together: in simulation they learned to complete tasks without getting in each other’s way.',
+      },
+      details: {
+        ru: [
+          'Прошёл путь от одноагентного RL к многоагентному: PPO на CartPole и LunarLanderContinuous, затем кооперативные среды PettingZoo (simple_spread).',
+          'Написал собственную среду на PettingZoo, которая моделирует логистику карьера. Агентов обучал алгоритмом MAPPO по схеме «централизованное обучение — децентрализованное исполнение»: критик видит всё состояние карьера, а каждый агент действует только по своим наблюдениям. Для координации добавил агентам каналы коммуникации.',
+          'Решал типичные проблемы MARL: распределение награды между агентами, нестационарность среды, подбор reward shaping для кооперативного поведения.',
+        ],
+        en: [
+          'Went from single-agent to multi-agent RL: PPO on CartPole and LunarLanderContinuous, then cooperative PettingZoo environments (simple_spread).',
+          'Wrote a custom PettingZoo environment that models quarry logistics. Agents were trained with MAPPO using centralized training and decentralized execution: the critic sees the whole quarry state while each agent acts on its own observations. I added communication channels to help them coordinate.',
+          'Tackled the usual MARL problems: credit assignment between agents, non-stationarity and reward shaping for cooperative behaviour.',
+        ],
+      },
+      tags: ['Python', 'PyTorch', 'PettingZoo', 'Gymnasium', 'MAPPO'],
+      private: true,
+    },
+    {
+      kind: 'client',
+      client: { ru: 'по ТЗ МГПУ', en: 'spec by MCU' },
+      title: { ru: 'Рекомендательная система элективов', en: 'Elective course recommender' },
+      category: 'ML',
+      desc: {
+        ru: 'Каждому студенту МГПУ система подбирает 5 элективных дисциплин, которые он с наибольшей вероятностью выберет. Качество — по метрике pNDCG@5, которая учитывает и попадание, и порядок рекомендаций.',
+        en: 'For every student of Moscow City University the system suggests the 5 electives they are most likely to pick. Quality is measured with pNDCG@5, which rewards both hits and ranking order.',
+      },
+      details: {
+        ru: [
+          'Двухэтапный пайплайн: сначала отбираются кандидаты, затем модель ранжирования упорядочивает их. Основа — LightGBM-ранкер на признаках студента, дисциплины и их взаимодействия; описания курсов векторизовал через TF-IDF со снижением размерности SVD.',
+          'Сравнивал подходы на локальной валидации по официальной метрике: коллаборативная фильтрация (ALS, EASE), CatBoost с ранжирующими лоссами, retrieval + re-ranking. Уже пройденные курсы исключаются из рекомендаций.',
+        ],
+        en: [
+          'A two-stage pipeline: candidate retrieval followed by a ranking model. The core is a LightGBM ranker on student, course and interaction features; course descriptions are vectorized with TF-IDF and reduced with SVD.',
+          'Compared approaches on local validation with the official metric: collaborative filtering (ALS, EASE), CatBoost with ranking losses, retrieval + re-ranking. Courses a student has already taken are excluded.',
+        ],
+      },
+      tags: ['Python', 'pandas', 'LightGBM', 'CatBoost', 'scikit-learn', 'implicit'],
+      private: true,
+    },
+    {
+      kind: 'client',
+      client: { ru: 'кейс Сбера', en: 'Sber case' },
+      title: { ru: 'Анализ клинических рекомендаций', en: 'Clinical guideline analysis' },
+      category: 'ML',
+      badge: { ru: 'Топ-10 · 66,9 из 70', en: 'Top 10 · 66.9 / 70' },
+      desc: {
+        ru: 'NLP на медицинских текстах: модель определяет, применим ли пункт клинической рекомендации к протоколу осмотра конкретного пациента, и классифицирует заголовки рекомендаций. 66,9 из 70 баллов за точность — команда вошла в топ-10 AI Challenge 2026.',
+        en: 'NLP on medical texts: the model decides whether a clinical guideline item applies to a specific patient’s examination record and classifies guideline headings. 66.9 of 70 accuracy points — our team made the top 10 of AI Challenge 2026.',
+      },
+      details: {
+        ru: [
+          'Ансамбль двух моделей. Кросс-энкодер на RuBioBERT получает заголовок и протокол вместе и оценивает их соответствие; CatBoost работает на 168 признаках — текстовых, возрастных, числовых и кодах МКБ из протоколов. Замена rubert-tiny2 на доменную RuBioBERT дала прирост в обеих подзадачах.',
+          'Чтобы обойти лимит длины BERT, переупорядочил текст протокола: ключевая информация не теряется при усечении. Пороги подбирал под целевые F-метрики (macro-F0.5 и macro-F2) по out-of-fold предсказаниям.',
+          'Заметил, что пересечение заголовков между train и test завышает обычную кросс-валидацию, и ввёл групповую валидацию — она отсеяла переобучающиеся идеи.',
+        ],
+        en: [
+          'An ensemble of two models. A RuBioBERT cross-encoder reads the heading and the record together and scores how well they match; CatBoost runs on 168 features — text, age, numeric and ICD codes extracted from the records. Switching from rubert-tiny2 to the domain-specific RuBioBERT improved both subtasks.',
+          'To get around BERT’s length limit I reordered the record text so key information survives truncation. Thresholds were tuned for the target F-metrics (macro-F0.5 and macro-F2) on out-of-fold predictions.',
+          'I noticed that heading overlap between train and test inflated regular cross-validation and switched to group validation, which filtered out overfitting ideas.',
+        ],
+      },
+      tags: ['Python', 'PyTorch', 'Transformers', 'RuBioBERT', 'CatBoost'],
+      private: true,
+    },
+    {
+      kind: 'client',
+      client: { ru: 'кейс Т-Банка', en: 'T-Bank case' },
       title: { ru: 'Амба — ИИ-гид по Приморью', en: 'Amba — AI guide to Primorye' },
       category: { ru: 'ИИ-агенты', en: 'AI agents' },
       badge: { ru: '🏆 Лучший продукт · Т-Банк', en: '🏆 Best product · T-Bank' },
@@ -263,6 +337,34 @@ window.SITE = {
       note: { ru: 'Если приложение не отвечает — значит, демо-ключ API уже отозван', en: 'If the app does not respond, the demo API key has been revoked' },
     },
     {
+      kind: 'client',
+      client: { ru: 'заказ ТЦ', en: 'for the mall' },
+      title: { ru: 'Сайт ТЦ «Уссури Молл»', en: 'Ussuri Mall website' },
+      category: { ru: 'Веб', en: 'Web' },
+      desc: {
+        ru: 'Сайт крупнейшего торгового центра Уссурийска: интерактивная карта этажей, каталог магазинов и информация о ТЦ.',
+        en: 'Website for the largest shopping mall in Ussuriysk: an interactive floor map, a store directory and mall information.',
+      },
+      tags: ['HTML', 'CSS', 'JavaScript'],
+      image: 'assets/img/projects/ussuri-mall.webp',
+      links: [{ label: { ru: 'Сайт', en: 'Website' }, url: 'https://bessolitsingleb.github.io/ussuri_mall/' }],
+    },
+    {
+      kind: 'client',
+      client: { ru: 'кейс Т-Банка', en: 'T-Bank case' },
+      title: { ru: 'Токенман', en: 'Tokenman' },
+      category: { ru: 'Веб', en: 'Web' },
+      badge: { ru: 'Т-Банк × Сириус Приморье', en: 'T-Bank × Sirius Primorye' },
+      desc: {
+        ru: '«Токен Аркада» — веб-приложение с пятью аркадами: Токенман по мотивам классики, Флаппи, Блок-бласт, Бильярд и Три в ряд. Рекорды, профиль, звук, управление с клавиатуры и джойстик на телефоне.',
+        en: '“Token Arcade” — a web app with five arcade games: Tokenman inspired by the classic, Flappy, Block Blast, Billiards and Match-3. High scores, a profile, sound, keyboard controls and an on-screen joystick on phones.',
+      },
+      tags: ['HTML', 'CSS', 'JavaScript', 'Canvas'],
+      image: 'assets/img/projects/tokenman.webp',
+      links: [{ label: { ru: 'Играть', en: 'Play' }, url: 'https://bessolitsingleb.github.io/Tokenman/' }],
+    },
+    {
+      kind: 'event',
       title: { ru: 'AI-рекрутер олимпиад', en: 'AI Olympiad Recruiter' },
       category: { ru: 'ИИ-агенты', en: 'AI agents' },
       badge: { ru: '🏆 Победа на хакатоне', en: '🏆 Hackathon winner' },
@@ -274,6 +376,7 @@ window.SITE = {
       links: [{ label: 'GitHub', url: 'https://github.com/leksik-phew/AI-Recruiter-olimpiads' }],
     },
     {
+      kind: 'event',
       title: { ru: 'Катамаран «Водолаз»', en: '“Vodolaz” catamaran' },
       category: { ru: 'Системы', en: 'Systems' },
       badge: { ru: 'Сириус · Большие вызовы', en: 'Sirius · Big Challenges' },
@@ -289,17 +392,7 @@ window.SITE = {
       ],
     },
     {
-      title: 'Comsim',
-      category: { ru: 'ИИ-агенты', en: 'AI agents' },
-      status: { ru: 'В разработке', en: 'In progress' },
-      desc: {
-        ru: 'Тренажёр продаж: человек общается с ИИ-«клиентом» и пытается продать ему продукт в реальном времени. Два режима — переписка в чате и живой голосовой звонок.',
-        en: 'A sales trainer: you talk to an AI “client” and try to sell them a product in real time. Two modes — text chat and a live voice call.',
-      },
-      tags: ['Python', 'FastAPI', 'LLM', 'Speech'],
-      links: [{ label: 'GitHub', url: 'https://github.com/BessolitsinGleb/communication_simulator' }],
-    },
-    {
+      kind: 'pet',
       title: 'EFCT',
       category: { ru: 'Системы', en: 'Systems' },
       status: { ru: 'На доработке', en: 'In development' },
@@ -311,6 +404,19 @@ window.SITE = {
       links: [{ label: 'GitHub', url: 'https://github.com/BessolitsinGleb/EFCT' }],
     },
     {
+      kind: 'pet',
+      title: 'Comsim',
+      category: { ru: 'ИИ-агенты', en: 'AI agents' },
+      status: { ru: 'В разработке', en: 'In progress' },
+      desc: {
+        ru: 'Тренажёр продаж: человек общается с ИИ-«клиентом» и пытается продать ему продукт в реальном времени. Два режима — переписка в чате и живой голосовой звонок.',
+        en: 'A sales trainer: you talk to an AI “client” and try to sell them a product in real time. Two modes — text chat and a live voice call.',
+      },
+      tags: ['Python', 'FastAPI', 'LLM', 'Speech'],
+      links: [{ label: 'GitHub', url: 'https://github.com/BessolitsinGleb/communication_simulator' }],
+    },
+    {
+      kind: 'pet',
       title: 'Smart Wardrobe',
       category: { ru: 'ИИ-агенты', en: 'AI agents' },
       desc: {
@@ -321,30 +427,7 @@ window.SITE = {
       links: [{ label: 'GitHub', url: 'https://github.com/BessolitsinGleb/smart_wardrobe' }],
     },
     {
-      title: { ru: 'Сайт ТЦ «Уссури Молл»', en: 'Ussuri Mall website' },
-      category: { ru: 'Веб', en: 'Web' },
-      badge: { ru: 'Коммерческий заказ', en: 'Client project' },
-      desc: {
-        ru: 'Сайт крупнейшего торгового центра Уссурийска: интерактивная карта этажей, каталог магазинов и информация о ТЦ.',
-        en: 'Website for the largest shopping mall in Ussuriysk: an interactive floor map, a store directory and mall information.',
-      },
-      tags: ['HTML', 'CSS', 'JavaScript'],
-      image: 'assets/img/projects/ussuri-mall.webp',
-      links: [{ label: { ru: 'Сайт', en: 'Website' }, url: 'https://bessolitsingleb.github.io/ussuri_mall/' }],
-    },
-    {
-      title: { ru: 'Токенман', en: 'Tokenman' },
-      category: { ru: 'Веб', en: 'Web' },
-      badge: { ru: 'Т-Банк × Сириус Приморье', en: 'T-Bank × Sirius Primorye' },
-      desc: {
-        ru: '«Токен Аркада» — веб-приложение с пятью аркадами: Токенман по мотивам классики, Флаппи, Блок-бласт, Бильярд и Три в ряд. Рекорды, профиль, звук, управление с клавиатуры и джойстик на телефоне.',
-        en: '“Token Arcade” — a web app with five arcade games: Tokenman inspired by the classic, Flappy, Block Blast, Billiards and Match-3. High scores, a profile, sound, keyboard controls and an on-screen joystick on phones.',
-      },
-      tags: ['HTML', 'CSS', 'JavaScript', 'Canvas'],
-      image: 'assets/img/projects/tokenman.webp',
-      links: [{ label: { ru: 'Играть', en: 'Play' }, url: 'https://bessolitsingleb.github.io/Tokenman/' }],
-    },
-    {
+      kind: 'pet',
       title: 'Resentment Level',
       category: 'ML',
       desc: {
@@ -355,6 +438,7 @@ window.SITE = {
       links: [{ label: 'GitHub', url: 'https://github.com/BessolitsinGleb/resentment_level' }],
     },
     {
+      kind: 'pet',
       title: 'Voice Read',
       category: { ru: 'Системы', en: 'Systems' },
       status: { ru: 'Для себя', en: 'Personal tool' },
@@ -366,6 +450,7 @@ window.SITE = {
       links: [{ label: 'GitHub', url: 'https://github.com/BessolitsinGleb/voice_read' }],
     },
     {
+      kind: 'pet',
       title: 'OS AI Survey',
       category: 'ML',
       desc: {
